@@ -1,0 +1,36 @@
+
+@mixin flex($justify,$align){
+    display:flex;justify-content:$justify;align-items:$align;
+}
+
+@mixin margin($values...){
+    margin:$values;
+}
+
+@mixin padding($values...){
+    padding:$values;
+}
+
+@mixin minMaxScreen($min,$max){
+    @media only screen and (min-width:$min) and (max-width:$max) {
+        @content;
+    }
+}
+
+@mixin maxScreen($max){
+    @media only screen  and (max-width:$max) {
+        @content;
+    }
+}
+
+@mixin clash(){
+    font-family: 'Clash Display', sans-serif;
+}
+
+@mixin archivo(){
+    font-family: 'Archivo', sans-serif;
+}
+
+@mixin poppins(){
+    font-family: 'Poppins', sans-serif;
+}
