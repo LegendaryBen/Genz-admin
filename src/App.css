@@ -63,7 +63,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Archivo", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -97,5 +97,121 @@ body {
 .nav-container {
   width: 100%;
   height: calc(100vh - 80px);
-  background-color: blue;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-container .sidebar {
+  flex-basis: 30%;
+  height: 100%;
+  position: relative;
+}
+.nav-container .sidebar .nav-buttons {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.nav-container .sidebar .nav-buttons .route {
+  width: 80%;
+  background-color: #FAFAFA;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1490196078);
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #505050;
+  transition: 300ms;
+  margin-bottom: 15px;
+}
+.nav-container .sidebar .nav-buttons .route:hover {
+  background-color: #0BA348;
+  color: white;
+  box-shadow: 0px 1px 2px 0px transparent;
+}
+.nav-container .sidebar .nav-buttons .route div {
+  margin-left: 10px;
+}
+.nav-container .sidebar .nav-buttons .route2 {
+  width: 80%;
+  background-color: #FAFAFA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1490196078);
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #505050;
+  transition: 300ms;
+  margin-bottom: 15px;
+}
+.nav-container .sidebar .nav-buttons .route2 .content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-container .sidebar .nav-buttons .route2 .content div {
+  margin-left: 10px;
+}
+.nav-container .sidebar .nav-buttons .route2:hover {
+  background-color: #0BA348;
+  color: white;
+  box-shadow: 0px 1px 2px 0px transparent;
+}
+.nav-container .sidebar .nav-buttons .route2 .badge {
+  background: #EA1111;
+  color: white;
+  border-radius: 50%;
+  min-width: 30px;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.nav-container .sidebar .settings {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav-container .sidebar .settings a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 40px;
+  text-decoration: none;
+  color: #4F4F4F;
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15px;
+}
+.nav-container .sidebar .settings a div {
+  margin-left: 10px;
+}
+.nav-container .container {
+  height: 100%;
+  flex: 1;
+  overflow: auto;
 }/*# sourceMappingURL=App.css.map */
