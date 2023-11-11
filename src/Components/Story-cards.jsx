@@ -1,9 +1,10 @@
 import React from 'react'
 import chima from '../Images/chima.jpg'
+import { Link } from 'react-router-dom'
 
 const Story_cards = () => {
     return (
-        <div className='story-cards'>
+        <Link className='story-cards'>
             <img src={chima} alt="" />
             <div>
                 <div className="card-header">
@@ -19,7 +20,7 @@ const Story_cards = () => {
                     July 4, 2023
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
