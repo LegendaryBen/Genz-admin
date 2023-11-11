@@ -116,7 +116,7 @@ body {
   margin-top: 30px;
 }
 .nav-container .sidebar .nav-buttons .route {
-  width: 80%;
+  width: 60%;
   background-color: #FAFAFA;
   display: flex;
   justify-content: flex-start;
@@ -142,7 +142,7 @@ body {
   margin-left: 10px;
 }
 .nav-container .sidebar .nav-buttons .route2 {
-  width: 80%;
+  width: 60%;
   background-color: #FAFAFA;
   display: flex;
   justify-content: space-between;
@@ -198,7 +198,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 80%;
+  width: 60%;
   margin-bottom: 40px;
   text-decoration: none;
   color: #4F4F4F;
@@ -214,4 +214,89 @@ body {
   height: 100%;
   flex: 1;
   overflow: auto;
+  scrollbar-face-color: #888;
+  scrollbar-track-color: #f1f1f1;
+  scrollbar-arrow-color: #555;
+  scrollbar-color: dark darkblue;
+  scrollbar-width: thin;
+  padding-top: 30px;
+}
+.nav-container .container::-webkit-scrollbar {
+  width: 10px;
+}
+.nav-container .container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.nav-container .container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.nav-container .container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.snippets {
+  width: 100%;
+  padding: 0px 20px;
+  margin-bottom: 30px;
+}
+.snippets .snippet-header {
+  color: #505050;
+  font-family: "Clash Display", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.story-cards {
+  width: 91%;
+  height: 130px;
+  border-bottom: 0.5px solid #CCCCCC;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 2px 0px transparent;
+  transition: 300ms;
+  padding: 20px;
+}
+.story-cards:hover {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.story-cards img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  margin-right: 30px;
+}
+.story-cards .card-header {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #D30000;
+  margin-bottom: 10px;
+}
+.story-cards .card-topic {
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13px;
+  margin-bottom: 10px;
+  color: #505050;
+}
+.story-cards .card-author {
+  font-family: "Archivo", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 11px;
+  margin-bottom: 10px;
+  color: #505050;
+}
+.story-cards .card-date {
+  font-family: "Archivo", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 11px;
+  color: #707070;
 }/*# sourceMappingURL=App.css.map */

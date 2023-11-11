@@ -70,7 +70,7 @@
             margin-top:30px;
 
             .route{
-                width:80%;background-color:$white1;@include flex(flex-start,center);text-decoration:none;
+                width:60%;background-color:$white1;@include flex(flex-start,center);text-decoration:none;
                 @include padding(15px 20px);border-radius:10px;box-shadow: 0px 1px 2px 0px #00000026;
                 @include archivo;font-size: 14px;font-weight: 500;line-height: 15px;color:$grey5;
                 transition:300ms;margin-bottom:15px;
@@ -86,7 +86,7 @@
             }
 
             .route2{
-                width:80%;background-color:$white1;@include flex(space-between,center);text-decoration:none;
+                width:60%;background-color:$white1;@include flex(space-between,center);text-decoration:none;
                 @include padding(15px 20px);border-radius:10px;box-shadow: 0px 1px 2px 0px #00000026;
                 @include archivo;font-size: 14px;font-weight: 500;line-height: 15px;color:$grey5;
                 transition:300ms;margin-bottom:15px;
@@ -116,7 +116,7 @@
             @include flex(center,center);flex-direction:column;
 
             a{
-                @include flex(flex-start,center);width:80%;margin-bottom:40px;text-decoration:none;
+                @include flex(flex-start,center);width:60%;margin-bottom:40px;text-decoration:none;
                 color:$grey3;@include archivo;font-size: 14px;font-weight: 500;line-height: 15px;
 
                 div{
@@ -128,7 +128,69 @@
     }
 
     .container{
-        height:100%;flex:1;overflow:auto;
+        height:100%;flex:1;overflow:auto;scrollbar-face-color: #888;scrollbar-track-color: #f1f1f1;
+        scrollbar-arrow-color: #555;scrollbar-color: dark darkblue;scrollbar-width: thin;
+
+        padding-top:30px;
+
+            &::-webkit-scrollbar {
+                width:10px;
+            }
+          
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+            
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+    }
+}
+
+.snippets{
+    width:100%;@include padding(0px 20px);margin-bottom:30px;
+
+    .snippet-header{
+        color:$grey5;@include clash;font-size: 20px;font-weight: 600;line-height: 25px;
+        margin-bottom:20px;
+    }
+}
+
+.story-cards{
+    width:91%;height:130px;border-bottom: 0.5px solid $grey1;@include flex(flex-start,flex-start);
+    margin-bottom:20px;box-shadow: 0px 1px 2px 0px transparent;transition:300ms;
+    @include padding(20px);
+
+    &:hover{
+        box-shadow: 0px 1px 2px 0px #00000026;
+    }
+
+
+    img{
+        width:120px;height:90px;object-fit:cover;margin-right:30px;
+    }
+
+    .card-header{
+        @include archivo;font-size: 16px;font-weight: 500;line-height: 17px;color:$red2;margin-bottom:10px;
+    }
+
+    .card-topic{
+        @include archivo;font-size: 12px;font-weight: 400;line-height: 13px;margin-bottom:10px;
+        color:$grey5;
+    }
+
+    .card-author{
+        @include archivo;font-size: 10px;font-weight: 500;line-height: 11px;margin-bottom:10px;
+        color:$grey5;
+    }
+
+    .card-date{
+        @include archivo;font-size: 10px;font-weight: 400;line-height: 11px;
+        color:$grey6;
     }
 }
 

@@ -21,17 +21,17 @@ function App() {
          >  
             <Route index element={<Home/>}/>
             <Route path='stories' element={
-            <Suspense>
+            <Suspense fallback='loading..'>
               <Stories/>
             </Suspense>}
             />
             <Route path='magazines' element={
-            <Suspense>
+            <Suspense fallback='loading..'>
               <Magazine/>
             </Suspense>}
             />
             <Route path='drafts' element={
-            <Suspense>
+            <Suspense fallback='loading..'>
               <Draft/>
             </Suspense>}
             />
