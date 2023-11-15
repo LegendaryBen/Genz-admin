@@ -13,7 +13,6 @@ const Sidebar = (props) => {
                 <Buttons2 cls='route2' content="Drafts" image='drafts' to='drafts' badge='10'/>
             </div>
             <div className="settings">
-                <Buttons3 to='' image='settings' content='Settings'/>
                 <Buttons3 to='' image='logout' content='Log Out'/>
             </div>
         </div>

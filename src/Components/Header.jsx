@@ -3,6 +3,8 @@ import logo from '../Images/logo.svg'
 import chima from '../Images/chima.jpg'
 import find from '../Images/search.svg'
 import ham from '../Images/ham.svg'
+import user from '../Images/user.svg'
+
 
 const Header = () => {
     return (
@@ -17,7 +19,8 @@ const Header = () => {
             </div>
             <div className="avatar">
                 <div className='user-img-box'>
-                    <img src={chima} alt="" />
+                    {/* <img src={user} alt="" /> */}
+                    <span class="material-symbols-outlined span">person</span>
                     <div>
                         <span>Agozie. S</span><br/>
                         <span className='author'>Author</span>
