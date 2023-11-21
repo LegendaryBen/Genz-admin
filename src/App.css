@@ -594,7 +594,7 @@ body {
   line-height: 20px;
 }
 
-.container {
+.container1 {
   width: 100%;
   height: calc(100vh - 70px);
   display: flex;

@@ -16,7 +16,7 @@ const Login = () => {
         <div className='login'>
            <div className="login-details">
                 <Login_Header/>
-                <div className='container'>
+                <div className='container1'>
                     <Error/>
                     <User_link  title="AUTHOR  DASHBOARD"/>
                     <Nav_Link title="Login As Adminisgtrator"/>
