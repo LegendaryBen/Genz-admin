@@ -1,0 +1,26 @@
+import React from 'react'
+import Upload_warn from '../Components/Upload-warn'
+import Title from '../Components/Title'
+import Story from '../Components/Story'
+import Categories from '../Components/Categories'
+import Upload_Section from '../Components/Upload_Section'
+import Submit_Section from '../Components/Submit_Section'
+
+
+
+
+const Upload_Story = (props) => {
+    return (
+        <>
+            <Upload_warn/>
+            <Title title="Title"/>
+            <Story/>
+            <Categories/>
+            <Upload_Section/>
+            <Title title="Image Source"/>
+            <Submit_Section />
+        </>
+    )
+}
+
+export default Upload_Story

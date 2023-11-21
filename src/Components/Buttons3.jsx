@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Buttons3 = ({to,image,content}) => {
     return (
         <Link to={to}>
-            <span class="material-symbols-outlined">{image}</span>
+            <span className="material-symbols-outlined">{image}</span>
             <div>{content}</div>
         </Link>
     )

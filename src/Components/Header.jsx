@@ -20,7 +20,7 @@ const Header = () => {
             <div className="avatar">
                 <div className='user-img-box'>
                     {/* <img src={user} alt="" /> */}
-                    <span class="material-symbols-outlined span">person</span>
+                    <span className="material-symbols-outlined span">person</span>
                     <div>
                         <span>Agozie. S</span><br/>
                         <span className='author'>Author</span>

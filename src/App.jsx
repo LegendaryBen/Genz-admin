@@ -7,6 +7,7 @@ import Home from './Pages/Home'
 const Stories = lazy(()=> import('./Pages/Stories'))
 const Magazine = lazy(()=> import('./Pages/Magazine'))
 const Draft = lazy(()=> import('./Pages/Drafts'))
+const Upload_story = lazy(()=> import('./Pages/Upload_Story'))
 
 function App() {
   
@@ -33,6 +34,11 @@ function App() {
             <Route path='drafts' element={
             <Suspense fallback='loading..'>
               <Draft/>
+            </Suspense>}
+            />
+            <Route path='upload-story' element={
+            <Suspense fallback='loading..'>
+              <Upload_story/>
             </Suspense>}
             />
          </Route>
