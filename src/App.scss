@@ -512,3 +512,47 @@
     }
 
 }
+
+
+.modal{
+    width:100%;position:fixed;top:0;left:0;height:100vh;background-color:rgba(0, 0, 0,0.5);
+    backdrop-filter:blur(5px);@include flex(center,center);overflow:auto;
+
+
+    .modal-btns{
+        width:700px;height:350px;background-color:white;border-radius:10px;@include padding(20px);
+
+        .img-container{
+            @include flex(center,center);
+        }
+
+        .modal-topic{
+            text-align: center;@include padding(20px);color:black;@include archivo;font-size: 20px;
+            font-weight: 500;line-height: 22px;            
+        }
+
+        .modal-message{
+            @include padding(10px 0px);text-align: center;color:$grey4;@include archivo;
+            font-size: 16px;font-weight: 400;line-height: 17px;
+        }
+
+        .modal-btn-container{
+            @include flex(center,center);@include padding(20px 10px);
+
+            .modal-save{
+                width:40%;height:60px;margin-right:20px;border-radius:7px;@include flex(center,center);
+                @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
+
+            }
+
+            .publish{
+                color:white;background-color:$green1;
+            }
+
+            .cancle{
+                border: 1px solid #BDBDBD;color:black;
+            }
+        }
+    }
+
+}

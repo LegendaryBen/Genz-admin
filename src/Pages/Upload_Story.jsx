@@ -5,6 +5,7 @@ import Story from '../Components/Story'
 import Categories from '../Components/Categories'
 import Upload_Section from '../Components/Upload_Section'
 import Submit_Section from '../Components/Submit_Section'
+import Modal from '../Components/Modal'
 
 
 
@@ -18,7 +19,9 @@ const Upload_Story = (props) => {
             <Categories/>
             <Upload_Section/>
             <Title title="Image Source"/>
+            <Title title="Story By"/>
             <Submit_Section />
+            <Modal/>
         </>
     )
 }
