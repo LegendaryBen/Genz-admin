@@ -867,4 +867,136 @@ body {
 .modal .modal-btns .modal-btn-container .cancle {
   border: 1px solid #BDBDBD;
   color: black;
+}
+
+.Navbar {
+  height: 100vh;
+  width: 500px;
+  background-color: white;
+  position: fixed;
+  left: -100%;
+  top: 0;
+  overflow: auto;
+  padding: 20px;
+}
+.Navbar .nav-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.Navbar .nav-user span {
+  font-size: 40px;
+}
+.Navbar .nav-user .nav-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Navbar .nav-user .nav-name .name-container {
+  margin-left: 10px;
+}
+.Navbar .nav-user .nav-name .name-container .main-name {
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #4F4F4F;
+}
+.Navbar .nav-user .nav-name .name-container .nav-author {
+  font-family: "Archivo", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+}
+.Navbar .search-box2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.Navbar .search-box2 img {
+  margin-right: 10px;
+}
+.Navbar .search-box2 input {
+  flex: 1;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #4F4F4F;
+}
+
+.nav-btn1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  margin-top: 30px;
+  color: #505050;
+  width: 100%;
+  padding: 10px 10px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 7px;
+  transition: 300ms;
+}
+.nav-btn1:hover {
+  background-color: #0BA348;
+  color: white;
+}
+.nav-btn1 div {
+  margin-left: 10px;
+}
+
+.nav-btn2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  margin-top: 30px;
+  color: #505050;
+  width: 100%;
+  padding: 10px 10px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 7px;
+  transition: 300ms;
+}
+.nav-btn2:hover {
+  background-color: #0BA348;
+  color: white;
+}
+.nav-btn2 .nav-first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-btn2 .nav-first div {
+  margin-left: 10px;
+}
+.nav-btn2 .badge2 {
+  background: #EA1111;
+  color: white;
+  border-radius: 50%;
+  min-width: 30px;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }/*# sourceMappingURL=App.css.map */

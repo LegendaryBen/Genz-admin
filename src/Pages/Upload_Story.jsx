@@ -21,7 +21,7 @@ const Upload_Story = (props) => {
             <Title title="Image Source"/>
             <Title title="Story By"/>
             <Submit_Section />
-            <Modal/>
+            {/* <Modal/> */}
         </>
     )
 }
