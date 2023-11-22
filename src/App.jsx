@@ -8,6 +8,7 @@ const Stories = lazy(()=> import('./Pages/Stories'))
 const Magazine = lazy(()=> import('./Pages/Magazine'))
 const Draft = lazy(()=> import('./Pages/Drafts'))
 const Upload_story = lazy(()=> import('./Pages/Upload_Story'))
+const Upload_magazine_story = lazy(()=> import('./Pages/Upload_magazine_story'))
 
 function App() {
   
@@ -39,6 +40,11 @@ function App() {
             <Route path='upload-story' element={
             <Suspense fallback='loading..'>
               <Upload_story/>
+            </Suspense>}
+            />
+            <Route path='upload-magazine-story' element={
+            <Suspense fallback='loading..'>
+              <Upload_magazine_story/>
             </Suspense>}
             />
          </Route>
