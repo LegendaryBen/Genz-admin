@@ -266,10 +266,24 @@
 
 
 .login{
-    width:100%;height:100vh;overflow:hidden;@include flex(center,center);
+    width:100%;height:100vh;overflow:hidden;@include flex(center,center);padding-top:0;
+
+
+    @include maxScreen($tablet){
+        overflow: auto;padding-top:70px;
+    }
+
+    @include maxScreen($mobile2){
+        overflow:hidden;
+    }
+
 
     .img-block{
-        width:45%;height:inherit;
+        width:45%;height:inherit;display:block;
+
+        @include maxScreen($tablet){
+            display:none;
+        }
 
         img{
             width:100%;height:100%;object-fit:cover;
@@ -278,6 +292,7 @@
 
     .login-details{
         height:100%;flex:1;
+    
     }
 }
 
@@ -285,18 +300,54 @@
 .login-header{
     width:100%;height:70px;@include flex(flex-start,center);@include padding(20px 70px);
 
+    @include minMaxScreen($laptop-min,$laptop-max){
+        @include padding(20px 40px); 
+    }
+
+
+    @include maxScreen($tablet){
+        @include padding(20px 30px); height:60px;display:none;
+    }
+
+
+
     img{
         margin-right:10px;width:30px;height:30px;object-fit:contain;
+
+        @include maxScreen($tablet){
+            height:20px;width:20px;
+        }
     }
 
     span{
         color:black;@include clash;font-size: 16px;font-weight: 600;line-height: 20px;
+
+        @include maxScreen($tablet){
+            font-size:12px;line-height:14px;
+        }
     }
 }
 
 .error{
     width:100%;text-align:center;@include padding(20px 40px);color:$red2;@include archivo;
     font-size: 16px;font-weight: 500;line-height: 17px;margin-bottom:30px;
+
+
+    @include maxScreen($tablet){
+        font-size:14px;line-height:14px;margin-bottom:20px;
+    }
+
+
+    @include maxScreen($mobile1){
+        margin-bottom:10px;
+    }
+
+    
+    @include minMaxScreen($laptop-min,$laptop-max){
+        @include padding(20px 20px);margin-bottom:20px;
+    }
+
+    
 }
 
 
@@ -304,9 +355,31 @@
     width:100%;height:50px;@include flex(center,center);margin-bottom:30px;
     @include padding(0px 40px);
 
+    
+    @include minMaxScreen($laptop-min,$laptop-max){
+        margin-bottom:20px; 
+    }
+
+
+    @include maxScreen($tablet){
+        margin-bottom:20px;
+    }
+
+
     div{
         width:300px;text-align:center;color:black;@include clash;font-size: 24px;
-        font-weight: 600;line-height: 30px;
+        font-weight: 600;line-height: 30px;overflow: hidden;
+
+
+        @include maxScreen($tablet){
+            font-size:16px;line-height:17px;
+        }
+
+
+        @include maxScreen($mobile1){
+            width:280px;
+        }
+
 
         .dot{
             color:$grey6;@include archivo;font-size: 16px;font-weight: 500;line-height: 17px;
@@ -318,11 +391,41 @@
 .navlink{
     width:100%;height:50px;@include flex(center,center);margin-bottom:30px;
 
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        margin-bottom:20px;
+    }
+
+
+    @include maxScreen($tablet){
+        margin-bottom:20px;
+    }
+
+    @include maxScreen($mobile1){
+        margin-bottom:10px;
+    }
+
+
     a{
         width:50%;height:100%;@include flex(center,center);text-decoration:none;
         box-shadow: 0px 1px 3px 0px #00000040;border: 1px solid #CCCCCC;
         color:black;@include clash;font-size: 16px;font-weight: 600;line-height: 20px;
         border-radius:8px;
+
+        
+        @include minMaxScreen($laptop-min,$laptop-max){
+            width:70%;
+        }
+
+
+        @include maxScreen($tablet){
+            width:70%;font-size:13px;line-height:14px;
+        }
+
+        @include maxScreen($mobile1){
+            width:80%;
+        }
+
         
         img{
             margin-right:10px;
@@ -336,6 +439,22 @@
 
     div{
         width:50%;height:3px;background-color:$grey1;@include flex(center,center);
+        @include archivo;font-size: 14px;font-weight: 600;line-height: 15px;color:$grey6;
+
+
+        @include minMaxScreen($laptop-min,$laptop-max){
+            width:70%;
+        }
+
+        @include maxScreen($tablet){
+            width:70%;
+        }
+
+
+        @include maxScreen($mobile1){
+            margin-bottom:10px;width:80%;
+        }
+
 
         span{
             background-color:white;border-radius:50%;height:40px;width:40px;@include flex(center,center);
@@ -349,8 +468,35 @@
 .input-box{
     width:100%;@include flex(center,center);margin-top:40px;
 
+    @include minMaxScreen($laptop-min,$laptop-max){
+        margin-top:30px;
+    }
+
+    
+    @include maxScreen($tablet){
+        margin-top:30px;
+    }
+
+    @include maxScreen($mobile1){
+        margin-top:20px;
+    }
+
     .div{
-        width:50%;@include archivo;font-size: 18px;font-weight: 600;line-height: 20px;        
+        width:50%;@include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
+        
+        
+        @include minMaxScreen($laptop-min,$laptop-max){
+            width:70%;
+        }
+
+        
+        @include maxScreen($tablet){
+            width:70%;font-size:14px;line-height:15px;
+        }
+
+        @include maxScreen($mobile1){
+            width:80%;
+        }
 
         span{
             color:$red2;
@@ -361,6 +507,11 @@
             border: 1px solid #CCCCCC;outline:none;color:$grey6;
             @include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
             box-shadow: 0px 1px 6px 0px #00000026;
+
+            @include maxScreen($tablet){
+                font-size:14px;line-height:15px;
+            }
+    
 
 
             &:focus{
@@ -376,10 +527,28 @@
 .submit{
     width:100%;@include flex(center,center);margin-top:40px;
 
+    @include maxScreen($mobile1){
+        margin-top:20px;
+    }
+
     div{
         width:50%;height:45px;background-color:black;color:white;
         @include flex(center,center);border-radius:7px;box-shadow: 0px 2px 6px 0px #00000040;
         @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
+        
+        @include minMaxScreen($laptop-min,$laptop-max){
+            width:70%;
+        }
+
+        @include maxScreen($tablet){
+            font-size:14px;line-height:15px;width:70%;
+        }
+
+        @include maxScreen($mobile1){
+            width:80%;
+        }
+
+
     }
 }
 
