@@ -10,7 +10,7 @@ const Upload = () => {
             <div className="image-support">
                 We support PNGs and JPEGs  under 2MB
             </div>
-            <img src={frame} alt="" />
+            <img src={frame} alt=""  className='clicked'/>
         </div>
     )
 }

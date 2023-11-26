@@ -7,7 +7,7 @@ const Stories = (props) => {
         <>
             <div className="uploads">
                 <Link className="upload-btn" to='/authors/upload-story'>
-                    <span class="material-symbols-outlined">add</span>
+                    <span className="material-symbols-outlined">add</span>
                     <div>Upload New Story</div>
                 </Link>
             </div>

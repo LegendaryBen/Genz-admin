@@ -6,6 +6,18 @@
     width:100%;@include flex(space-between,center);height:80px;border-bottom: 0.5px solid $grey1;
     @include padding(0px 100px 0px 100px);
 
+    @include minMaxScreen($laptop-min,$laptop-max){
+        @include padding(0px 40px);
+    }
+
+    @include maxScreen($tablet){
+        @include padding(0px 30px);
+    }
+
+    @include maxScreen($mobile3){
+        @include padding(0px 20px);height:50px;
+    }
+
     .logo{
         @include flex(flex-start,center);
 
@@ -21,6 +33,10 @@
     .search-box{
         @include flex(flex-start,center);width:451px;height:40px;border: 1px solid $grey2;
         border-radius:10px;@include padding(5px 10px);
+
+        @include maxScreen($tablet){
+            display:none;
+        }
         
         img{
             margin-right:10px;
@@ -36,9 +52,15 @@
         @include flex(flex-start,center);@include archivo;font-size: 12px;font-weight: 500;line-height: 18px;
         color:$grey3;
 
+       
+
         .user-img-box{
 
             @include flex(flex-start,center);
+
+            @include maxScreen($tablet){
+                display:none;
+            }
 
             // img{
             //     width:40px;height:40px;object-fit:cover;border-radius:50%;margin-right:10px;
@@ -57,6 +79,14 @@
 
         .ham{
             width:40px;height:30px;object-fit:cover;display:none;
+
+            @include maxScreen($tablet){
+                display:block;
+            }
+
+            @include maxScreen($mobile3){
+                width:30px;height:30px;
+            }
         }
 
     }
@@ -67,7 +97,11 @@
     width:100%;height:calc(100vh - 80px);@include flex(flex-start,center);
 
     .sidebar{
-        flex-basis:30%;height:100%;position:relative;
+        flex-basis:30%;height:100%;position:relative;display:block;
+
+        @include maxScreen($tablet){
+            display:none;
+        }
 
         .nav-buttons{
             width:100%;height:400px;@include flex(flex-start,center);flex-direction: column;
@@ -78,6 +112,10 @@
                 @include padding(15px 20px);border-radius:10px;box-shadow: 0px 1px 2px 0px #00000026;
                 @include archivo;font-size: 14px;font-weight: 500;line-height: 15px;color:$grey5;
                 transition:300ms;margin-bottom:15px;
+
+                @include minMaxScreen($laptop-min,$laptop-max){
+                    width:80%;
+                }
 
                 &:hover{
                     background-color:$green1;color:white;box-shadow: 0px 1px 2px 0px transparent;
@@ -94,6 +132,10 @@
                 @include padding(15px 20px);border-radius:10px;box-shadow: 0px 1px 2px 0px #00000026;
                 @include archivo;font-size: 14px;font-weight: 500;line-height: 15px;color:$grey5;
                 transition:300ms;margin-bottom:15px;
+
+                @include minMaxScreen($laptop-min,$laptop-max){
+                    width:80%;
+                }
 
                 .content{
                     @include flex(flex-start,center);
@@ -124,6 +166,10 @@
                 color:$grey3;@include archivo;font-size: 14px;font-weight: 500;line-height: 15px;
                 @include padding(15px 20px);transition:300ms;border-radius:10px;
 
+                @include minMaxScreen($laptop-min,$laptop-max){
+                    width:80%;
+                }
+
                 div{
                     margin-left:10px;
                 }
@@ -140,8 +186,15 @@
     .container{
         height:100%;flex:1;overflow:auto;scrollbar-face-color: #888;scrollbar-track-color: #f1f1f1;
         scrollbar-arrow-color: #555;scrollbar-color: dark darkblue;scrollbar-width: thin;
+        padding-top:30px;padding-left:0px;
 
-        padding-top:30px;
+            @include maxScreen($tablet){
+                padding-left:20px;
+            }
+
+            @include maxScreen($mobile3){
+                padding-left:0px;
+            }
 
             &::-webkit-scrollbar {
                 width:10px;
@@ -164,9 +217,19 @@
 .snippets{
     width:100%;@include padding(0px 20px);margin-bottom:30px;
 
+
     .snippet-header{
         color:$grey5;@include clash;font-size: 20px;font-weight: 600;line-height: 25px;
         margin-bottom:20px;
+
+        @include maxScreen($tablet){
+            font-size:15px;line-break:20px;
+        }
+
+        @include maxScreen($tablet){
+            margin-bottom:10px;
+        }
+    
     }
 }
 
@@ -174,6 +237,19 @@
     width:91%;height:130px;border-bottom: 0.5px solid $grey1;@include flex(flex-start,flex-start);
     margin-bottom:20px;box-shadow: 0px 1px 2px 0px transparent;transition:300ms;
     @include padding(20px);text-decoration:none;
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        width:96%;
+    }
+
+    @include maxScreen($tablet){
+        width:96%;
+    }
+
+    @include maxScreen($tablet){
+        width:100%;@include padding(10px);
+    }
+
 
     &:hover{
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
@@ -205,23 +281,44 @@
 }
 
 .uploads{
-    width:91%;height:50px;@include flex(flex-end,center);
+    width:91%;height:50px;@include flex(flex-end,center);margin-bottom:0px;
+
+    @include maxScreen($tablet){
+        width:96%;margin-bottom:20px;
+    }
 
     .upload-btn{
         background-color:$green1;height:40px;width:200px;
         @include flex(center,center);@include archivo;font-size: 14px;font-weight: 500;line-height: 21px;
         color:$grey7;text-decoration:none;border-radius:8px;
+
+        @include maxScreen($tablet){
+            width:140px;font-size:12px;line-height:15px;
+        }
     }
+
 }
 
 
 .drafts{
-    width:91%;
+    width:91%;padding-left:0px;
+
+    @include maxScreen($tablet){
+        width:96%;
+    }
+
+    @include maxScreen($mobile3){
+        padding-left:20px;
+    }
 
     .card2{
         width:100%;height:130px;border-bottom: 0.5px solid $grey1;@include flex(flex-start,flex-start);
         margin-bottom:20px;box-shadow: 0px 1px 2px 0px transparent;transition:300ms;
         @include padding(20px);text-decoration:none;
+
+        @include maxScreen($mobile4){
+            height:150px;@include padding(10px);
+        }
 
 
         &:hover{
@@ -239,10 +336,18 @@
 
         .card-header-empty{
             width: 80px;height: 26px;margin-bottom:10px;border-bottom:2px solid $red2;
+
+            @include maxScreen($mobile4){
+                width:50px;
+            }
         }
 
         .card-topic-empty{
             width:150px;height: 19px;margin-bottom:10px;border-bottom:2px solid black;
+
+            @include maxScreen($mobile4){
+                width:100px;
+            }
         }
     
         .card-topic{
@@ -559,19 +664,45 @@
 
 
 .upload-warn{
-    width:659px;height:39px;border:2px solid $red2;@include flex(center, center);color:$red2;
+    width:80%;height:50px;border:2px solid $red2;@include flex(center, center);color:$red2;
     @include archivo;font-size: 16px;font-weight: 500;line-height: 17px;border-radius:5px;
-    margin-bottom:30px;
+    margin-bottom:30px;text-align: center;@include padding(10px 20px);margin-left:0px;
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        width:90%;
+    }
+
+    @include maxScreen($tablet){
+        width:96%;margin-left:10px;font-size:13px;line-height:13px;height:40px;
+    }
+
+    @include maxScreen($mobile3){
+        width:92%;margin-left:20px;
+    }
 
 }
 
 
 .upload-title{
-    margin-bottom:30px;
+    margin-bottom:30px;margin-left:0px;
+
+    
+    @include maxScreen($tablet){
+        margin-left:10px;
+    }
+
+    @include maxScreen($mobile3){
+        margin-left:20px;
+    }
+
 }
 
 .label{
     @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
+
+    @include maxScreen($tablet){
+        font-size:13px;line-height:13px;
+    }
 
     span{
         color:$red2;
@@ -584,6 +715,15 @@
     box-shadow: 0px 1px 6px 0px #00000026;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
     border-radius:5px;
 
+    @include maxScreen($tablet){
+        width:97%;
+    }
+
+    @include maxScreen($mobile3){
+        width:95%;
+    }
+
+
     &:focus{
         box-shadow: 0px 1px 6px 0px #00000026;border: 1px solid #2F80ED;
     }
@@ -595,6 +735,15 @@
     box-shadow: 0px 1px 6px 0px #00000026;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
     border-radius:5px;resize: none;
 
+    @include maxScreen($tablet){
+        width:97%;
+    }
+
+    @include maxScreen($mobile3){
+        width:95%;height:200px;
+    }
+
+
     &:focus{
         box-shadow: 0px 1px 6px 0px #00000026;border: 1px solid #2F80ED;
     }
@@ -602,11 +751,27 @@
 
 
 .categories{
-    width:100%;@include flex(flex-start, center);margin-bottom:30px;
+    width:100%;@include flex(flex-start, center);margin-bottom:30px;@include padding(10px 20px);
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        padding-right:30px;
+    }
+
+    @include maxScreen($mobile3){
+        @include padding(10px 25px);
+    }
 
     .select-category{
         text-decoration: underline;color:black;@include archivo;
-        font-size: 16px;font-weight: 500;line-height: 17px;flex-basis:15%
+        font-size: 16px;font-weight: 500;line-height: 17px;flex-basis:15%;
+
+        @include maxScreen($tablet){
+            font-size: 13px;line-height:14px;
+        }
+
+        @include maxScreen($mobile3){
+            flex-basis:40%;
+        }
     }
 
 }
@@ -619,7 +784,11 @@
 .category{
     @include padding(7px 7px);color:black;background-color:white;border-radius:5px;
     @include archivo;font-size: 16px;font-weight: 500;line-height: 17px;transition:300ms;
-    margin-right:15px;border: 1px solid #CCCCCC;
+    margin-right:15px;border: 1px solid #CCCCCC;margin-bottom:10px;
+
+    @include maxScreen($tablet){
+        font-size: 13px;line-height:14px;@include padding(4px 4px);
+    }
 
     &:hover{
         color:white;background-color:black;
@@ -629,11 +798,30 @@
 
 .upload-section{
     width:91%;height:300px;margin-bottom:30px;@include flex(flex-start,flex-start);
-    margin-top:40px;
+    margin-top:40px;@include padding(0px 0px);
+
+    @include maxScreen($tablet){
+        height:250px;@include padding(0px 10px);
+    }
+
+    @include maxScreen($mobile3){
+        height:150px;@include padding(0px 25px);
+    }
+
 
     .display-image{
         width:500px;height:100%;@include flex(center,center);overflow:hidden;
         position: relative;margin-right:40px;
+
+        @include maxScreen($tablet){
+            width:300px;margin-right:20px;
+        }
+
+
+        @include maxScreen($mobile3){
+            width:380px;
+        }
+    
 
         .img{
             width:100%;height:100%;position:absolute;@include flex(center, center);background-color:white;
@@ -645,17 +833,34 @@
         }
     }
 
+    .clicked{
+        width:200px;height:50px;
+
+        @include maxScreen($tablet){
+            width:100px;height:30px;
+        }
+    }
+
     .upload{
         width:400px;height:200px;
 
         .story-cover-image{
             color:black;@include archivo;font-size: 20px;font-weight: 600;line-height: 22px;
-            margin-bottom:10px;           
+            margin-bottom:10px;
+            
+            @include maxScreen($tablet){
+                font-size:15px;line-height:17px;
+            }
+        
         }
 
         .image-support{
             color:$grey6;@include archivo;font-size: 16px;font-weight: 400;line-height: 17px;
-            margin-bottom:15px;         
+            margin-bottom:15px;   
+            
+            @include maxScreen($tablet){
+                font-size:13px;line-height:14px;
+            }
         }
     }
 
@@ -663,11 +868,23 @@
 
 
 .submit-section{
-    width:91%;height:150px;margin-top:30px;
+    width:91%;height:150px;margin-top:30px;margin-left:0px;
+
+    @include maxScreen($tablet){
+        width:95%;margin-left:10px;
+    }
+
+    @include maxScreen($mobile3){
+        width:91%;margin-left:20px;
+    }
 
     .submit-story{
         width:500px;height:50px;@include flex(center,center);@include archivo;font-size: 18px;
-        font-weight: 600;line-height: 20px;border-radius:5px;margin-bottom:30px;    
+        font-weight: 600;line-height: 20px;border-radius:5px;margin-bottom:30px;  
+        
+        @include maxScreen($tablet){
+            width:100%;font-size:15px;line-height:16px;height:40px;
+        }
     }
 
     .black{
@@ -729,6 +946,10 @@
 .Navbar{
     height:100vh;width:500px;background-color:white;position:fixed;left:-100%;top:0;
     overflow:auto;@include padding(20px);
+
+    @include maxScreen($mobile3){
+        width:100%;
+    }
 
     .nav-user{
 

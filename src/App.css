@@ -17,6 +17,22 @@ body {
   border-bottom: 0.5px solid #CCCCCC;
   padding: 0px 100px 0px 100px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .header {
+    padding: 0px 40px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .header {
+    padding: 0px 30px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .header {
+    padding: 0px 20px;
+    height: 50px;
+  }
+}
 .header .logo {
   display: flex;
   justify-content: flex-start;
@@ -43,6 +59,11 @@ body {
   border: 1px solid #BDBDBD;
   border-radius: 10px;
   padding: 5px 10px;
+}
+@media only screen and (max-width: 1023px) {
+  .header .search-box {
+    display: none;
+  }
 }
 .header .search-box img {
   margin-right: 10px;
@@ -74,6 +95,11 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
+@media only screen and (max-width: 1023px) {
+  .header .avatar .user-img-box {
+    display: none;
+  }
+}
 .header .avatar .user-img-box .span {
   font-size: 40px;
   color: #4F4F4F;
@@ -91,6 +117,17 @@ body {
   object-fit: cover;
   display: none;
 }
+@media only screen and (max-width: 1023px) {
+  .header .avatar .ham {
+    display: block;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .header .avatar .ham {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 .nav-container {
   width: 100%;
@@ -103,6 +140,12 @@ body {
   flex-basis: 30%;
   height: 100%;
   position: relative;
+  display: block;
+}
+@media only screen and (max-width: 1023px) {
+  .nav-container .sidebar {
+    display: none;
+  }
 }
 .nav-container .sidebar .nav-buttons {
   width: 100%;
@@ -131,6 +174,11 @@ body {
   transition: 300ms;
   margin-bottom: 15px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .nav-container .sidebar .nav-buttons .route {
+    width: 80%;
+  }
+}
 .nav-container .sidebar .nav-buttons .route:hover {
   background-color: #0BA348;
   color: white;
@@ -156,6 +204,11 @@ body {
   color: #505050;
   transition: 300ms;
   margin-bottom: 15px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .nav-container .sidebar .nav-buttons .route2 {
+    width: 80%;
+  }
 }
 .nav-container .sidebar .nav-buttons .route2 .content {
   display: flex;
@@ -208,6 +261,11 @@ body {
   transition: 300ms;
   border-radius: 10px;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .nav-container .sidebar .settings a {
+    width: 80%;
+  }
+}
 .nav-container .sidebar .settings a div {
   margin-left: 10px;
 }
@@ -226,6 +284,17 @@ body {
   scrollbar-color: dark darkblue;
   scrollbar-width: thin;
   padding-top: 30px;
+  padding-left: 0px;
+}
+@media only screen and (max-width: 1023px) {
+  .nav-container .container {
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .nav-container .container {
+    padding-left: 0px;
+  }
 }
 .nav-container .container::-webkit-scrollbar {
   width: 10px;
@@ -253,6 +322,17 @@ body {
   line-height: 25px;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 1023px) {
+  .snippets .snippet-header {
+    font-size: 15px;
+    line-break: 20px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .snippets .snippet-header {
+    margin-bottom: 10px;
+  }
+}
 
 .story-cards {
   width: 91%;
@@ -266,6 +346,22 @@ body {
   transition: 300ms;
   padding: 20px;
   text-decoration: none;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .story-cards {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .story-cards {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .story-cards {
+    width: 100%;
+    padding: 10px;
+  }
 }
 .story-cards:hover {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
@@ -314,6 +410,13 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 1023px) {
+  .uploads {
+    width: 96%;
+    margin-bottom: 20px;
+  }
 }
 .uploads .upload-btn {
   background-color: #0BA348;
@@ -330,9 +433,27 @@ body {
   text-decoration: none;
   border-radius: 8px;
 }
+@media only screen and (max-width: 1023px) {
+  .uploads .upload-btn {
+    width: 140px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
 
 .drafts {
   width: 91%;
+  padding-left: 0px;
+}
+@media only screen and (max-width: 1023px) {
+  .drafts {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .drafts {
+    padding-left: 20px;
+  }
 }
 .drafts .card2 {
   width: 100%;
@@ -346,6 +467,12 @@ body {
   transition: 300ms;
   padding: 20px;
   text-decoration: none;
+}
+@media only screen and (max-width: 455px) {
+  .drafts .card2 {
+    height: 150px;
+    padding: 10px;
+  }
 }
 .drafts .card2:hover {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
@@ -370,11 +497,21 @@ body {
   margin-bottom: 10px;
   border-bottom: 2px solid #D30000;
 }
+@media only screen and (max-width: 455px) {
+  .drafts .card2 .card-header-empty {
+    width: 50px;
+  }
+}
 .drafts .card2 .card-topic-empty {
   width: 150px;
   height: 19px;
   margin-bottom: 10px;
   border-bottom: 2px solid black;
+}
+@media only screen and (max-width: 455px) {
+  .drafts .card2 .card-topic-empty {
+    width: 100px;
+  }
 }
 .drafts .card2 .card-topic {
   font-family: "Archivo", sans-serif;
@@ -799,8 +936,8 @@ body {
 }
 
 .upload-warn {
-  width: 659px;
-  height: 39px;
+  width: 80%;
+  height: 50px;
   border: 2px solid #D30000;
   display: flex;
   justify-content: center;
@@ -812,10 +949,44 @@ body {
   line-height: 17px;
   border-radius: 5px;
   margin-bottom: 30px;
+  text-align: center;
+  padding: 10px 20px;
+  margin-left: 0px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .upload-warn {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .upload-warn {
+    width: 96%;
+    margin-left: 10px;
+    font-size: 13px;
+    line-height: 13px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .upload-warn {
+    width: 92%;
+    margin-left: 20px;
+  }
 }
 
 .upload-title {
   margin-bottom: 30px;
+  margin-left: 0px;
+}
+@media only screen and (max-width: 1023px) {
+  .upload-title {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .upload-title {
+    margin-left: 20px;
+  }
 }
 
 .label {
@@ -823,6 +994,12 @@ body {
   font-size: 18px;
   font-weight: 600;
   line-height: 20px;
+}
+@media only screen and (max-width: 1023px) {
+  .label {
+    font-size: 13px;
+    line-height: 13px;
+  }
 }
 .label span {
   color: #D30000;
@@ -840,6 +1017,16 @@ body {
   font-weight: 400;
   line-height: 17px;
   border-radius: 5px;
+}
+@media only screen and (max-width: 1023px) {
+  .title-input {
+    width: 97%;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .title-input {
+    width: 95%;
+  }
 }
 .title-input:focus {
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1490196078);
@@ -861,6 +1048,17 @@ body {
   border-radius: 5px;
   resize: none;
 }
+@media only screen and (max-width: 1023px) {
+  .textarea {
+    width: 97%;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .textarea {
+    width: 95%;
+    height: 200px;
+  }
+}
 .textarea:focus {
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1490196078);
   border: 1px solid #2F80ED;
@@ -872,6 +1070,17 @@ body {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 30px;
+  padding: 10px 20px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .categories {
+    padding-right: 30px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .categories {
+    padding: 10px 25px;
+  }
 }
 .categories .select-category {
   text-decoration: underline;
@@ -881,6 +1090,17 @@ body {
   font-weight: 500;
   line-height: 17px;
   flex-basis: 15%;
+}
+@media only screen and (max-width: 1023px) {
+  .categories .select-category {
+    font-size: 13px;
+    line-height: 14px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .categories .select-category {
+    flex-basis: 40%;
+  }
 }
 
 .cats {
@@ -902,6 +1122,14 @@ body {
   transition: 300ms;
   margin-right: 15px;
   border: 1px solid #CCCCCC;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 1023px) {
+  .category {
+    font-size: 13px;
+    line-height: 14px;
+    padding: 4px 4px;
+  }
 }
 .category:hover {
   color: white;
@@ -916,6 +1144,19 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 40px;
+  padding: 0px 0px;
+}
+@media only screen and (max-width: 1023px) {
+  .upload-section {
+    height: 250px;
+    padding: 0px 10px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .upload-section {
+    height: 150px;
+    padding: 0px 25px;
+  }
 }
 .upload-section .display-image {
   width: 500px;
@@ -926,6 +1167,17 @@ body {
   overflow: hidden;
   position: relative;
   margin-right: 40px;
+}
+@media only screen and (max-width: 1023px) {
+  .upload-section .display-image {
+    width: 300px;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .upload-section .display-image {
+    width: 380px;
+  }
 }
 .upload-section .display-image .img {
   width: 100%;
@@ -943,6 +1195,16 @@ body {
   position: absolute;
   object-fit: cover;
 }
+.upload-section .clicked {
+  width: 200px;
+  height: 50px;
+}
+@media only screen and (max-width: 1023px) {
+  .upload-section .clicked {
+    width: 100px;
+    height: 30px;
+  }
+}
 .upload-section .upload {
   width: 400px;
   height: 200px;
@@ -955,6 +1217,12 @@ body {
   line-height: 22px;
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 1023px) {
+  .upload-section .upload .story-cover-image {
+    font-size: 15px;
+    line-height: 17px;
+  }
+}
 .upload-section .upload .image-support {
   color: #707070;
   font-family: "Archivo", sans-serif;
@@ -963,11 +1231,30 @@ body {
   line-height: 17px;
   margin-bottom: 15px;
 }
+@media only screen and (max-width: 1023px) {
+  .upload-section .upload .image-support {
+    font-size: 13px;
+    line-height: 14px;
+  }
+}
 
 .submit-section {
   width: 91%;
   height: 150px;
   margin-top: 30px;
+  margin-left: 0px;
+}
+@media only screen and (max-width: 1023px) {
+  .submit-section {
+    width: 95%;
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .submit-section {
+    width: 91%;
+    margin-left: 20px;
+  }
 }
 .submit-section .submit-story {
   width: 500px;
@@ -981,6 +1268,14 @@ body {
   line-height: 20px;
   border-radius: 5px;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 1023px) {
+  .submit-section .submit-story {
+    width: 100%;
+    font-size: 15px;
+    line-height: 16px;
+    height: 40px;
+  }
 }
 .submit-section .black {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
@@ -1073,6 +1368,11 @@ body {
   top: 0;
   overflow: auto;
   padding: 20px;
+}
+@media only screen and (max-width: 595px) {
+  .Navbar {
+    width: 100%;
+  }
 }
 .Navbar .nav-user {
   display: flex;

@@ -10,7 +10,7 @@ const Navbar = (props) => {
 
             <div className="nav-user">
                 <div className="nav-name">
-                    <span class="material-symbols-outlined">person</span>
+                    <span className="material-symbols-outlined">person</span>
                     <div className='name-container'>
                         <div>
                             <div className="main-name">
@@ -56,7 +56,7 @@ const Navbar = (props) => {
             </Link>
 
             <Link className='nav-btn1'>
-                <span class="material-symbols-outlined">logout</span>
+                <span className="material-symbols-outlined">logout</span>
                 <div>Log out</div>
             </Link>
 

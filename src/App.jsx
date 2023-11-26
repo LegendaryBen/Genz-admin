@@ -3,6 +3,7 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import Login from './Pages/Login'
 const Authors = lazy(()=>import('./Pages/Authors'))
+const Admin = lazy(()=>import('./Pages/Admin'))
 import Home from './Pages/Home'
 const Stories = lazy(()=> import('./Pages/Stories'))
 const Magazine = lazy(()=> import('./Pages/Magazine'))
@@ -16,6 +17,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Login/>}/>
+        <Route path='/admin' element={
+            <Suspense fallback='loading..'>
+              <Admin/>
+            </Suspense>}
+        />
         <Route path='/authors'  element={
           <Suspense fallback='Loading...'>
             <Authors/>

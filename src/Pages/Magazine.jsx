@@ -7,7 +7,7 @@ const Magazine = (props) => {
         <>
             <div className="uploads">
                 <Link className="upload-btn" to='/authors/upload-magazine-story'>
-                    <span class="material-symbols-outlined">add</span>
+                    <span className="material-symbols-outlined">add</span>
                     <div>Upload New Story</div>
                 </Link>
             </div>
