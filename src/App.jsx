@@ -10,11 +10,13 @@ const Magazine = lazy(()=> import('./Pages/Magazine'))
 const Draft = lazy(()=> import('./Pages/Drafts'))
 const Upload_story = lazy(()=> import('./Pages/Upload_Story'))
 const Upload_magazine_story = lazy(()=> import('./Pages/Upload_magazine_story'))
+import Nav from './context api/Nav'
 
 function App() {
   
   return (
     <BrowserRouter>
+    <Nav>
       <Routes>
         <Route path='/' element={<Login/>}/>
         <Route path='/admin' element={
@@ -55,6 +57,7 @@ function App() {
             />
          </Route>
       </Routes>
+    </Nav>
     </BrowserRouter>
   )
  

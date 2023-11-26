@@ -1,12 +1,20 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import logo from '../Images/logo.svg'
 import chima from '../Images/chima.jpg'
 import find from '../Images/search.svg'
 import ham from '../Images/ham.svg'
 import user from '../Images/user.svg'
+import { NavContext } from '../context api/Nav'
+
+
+
 
 
 const Header = () => {
+
+    const {slide,setSlide} = useContext(NavContext);
+
+
     return (
         <div className='header'>
             <div className='logo'>
@@ -26,7 +34,7 @@ const Header = () => {
                         <span className='author'>Author</span>
                     </div>
                 </div>
-                <img src={ham} alt="" className='ham'/>
+                <img src={ham} alt="" className='ham' onClick={()=>{setSlide(true)}}/>
             </div>
         </div>
     )
