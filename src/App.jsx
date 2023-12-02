@@ -10,6 +10,7 @@ const Magazine = lazy(()=> import('./Pages/Magazine'))
 const Draft = lazy(()=> import('./Pages/Drafts'))
 const Upload_story = lazy(()=> import('./Pages/Upload_Story'))
 const Upload_magazine_story = lazy(()=> import('./Pages/Upload_magazine_story'))
+const AdminDashboard = lazy(()=> import('./Pages/AdminDashboard'))
 import Nav from './context api/Nav'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <Admin/>
             </Suspense>}
         />
+
         <Route path='/authors'  element={
           <Suspense fallback='Loading...'>
             <Authors/>
@@ -56,6 +58,15 @@ function App() {
             </Suspense>}
             />
          </Route>
+
+        <Route path='/admin-dashboard' element={
+          <Suspense>
+            <AdminDashboard/>
+          </Suspense>}
+         >
+          
+
+        </Route>
       </Routes>
     </Nav>
     </BrowserRouter>

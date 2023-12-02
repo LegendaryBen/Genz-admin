@@ -1,9 +1,9 @@
-import React from 'react'
 import Header from '../Components/Header'
 import Nav_container from '../Components/Nav-container'
-import Navbar from '../Components/Navbar'
 
-const Authors = (props) => {
+
+
+const AdminDashboard = (props) => {
 
     const navDetails = [
         {
@@ -14,21 +14,44 @@ const Authors = (props) => {
         },
         {
             cls:"route",
-            content:"New Stories",
+            content:"New Magazine",
             image:'edit_square',
             to:'stories'
         },
         {
             cls:"route",
-            content:"Magazine Stories",
+            content:"All Magazines",
             image:'menu_book',
             to:'magazines'
+        },
+        {
+            cls:"route",
+            content:"Users",
+            image:'person',
+            to:'magazines'
+        },
+        {
+            cls:"route",
+            content:"Send Notification",
+            image:'notifications',
+            to:'magazines'
+        },
+        {
+            cls:"route",
+            content:"Subscriptions",
+            image:'bookmark',
+            to:'magazines'
+        },
+        {
+            cls:"route",
+            content:"Add Authors",
+            image:'group_add',
+            to:'magazines'
         }
-
     ]
 
     const draft = {
-        status:true,
+        status:false,
         cls:'route2',
         content:"Drafts",
         image:'drafts',
@@ -37,14 +60,12 @@ const Authors = (props) => {
     }
 
 
-
     return (
         <>
             <Header/>
             <Nav_container details={navDetails} draft={draft}/>
-            <Navbar/>
         </>
     )
 }
 
-export default Authors
+export default AdminDashboard

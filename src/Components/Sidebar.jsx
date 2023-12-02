@@ -3,14 +3,18 @@ import Buttons from './Buttons'
 import Buttons2 from './Buttons2'
 import Buttons3 from './Buttons3'
 
-const Sidebar = (props) => {
+const Sidebar = ({navDEtails,draft}) => {
     return (
         <div className='sidebar'>
             <div className="nav-buttons">
-                <Buttons cls='route' content="Home" image='grid_view' to=''/>
-                <Buttons cls='route' content="New Stories" image='edit_square' to='stories'/>
-                <Buttons cls='route' content="Magazine Stories" image='menu_book' to='magazines'/>
-                <Buttons2 cls='route2' content="Drafts" image='drafts' to='drafts' badge='10'/>
+                {
+                    navDEtails.map((item,i)=><Buttons cls={item.cls} content={item.content} image={item.image} to={item.to} key={i}/>)
+                }
+
+                {
+                    draft.status &&  <Buttons2 cls={draft.cls} content={draft.content} image={draft.image} to={draft.to} badge={draft.badge}/>
+                }
+
             </div>
             <div className="settings">
                 <Buttons3 to='' image='logout' content='Log Out'/>
