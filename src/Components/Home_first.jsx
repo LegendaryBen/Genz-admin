@@ -80,11 +80,10 @@ const Home_first = () => {
                         <span className="material-symbols-outlined" style={{transform:!drop ? "rotate(0deg)":"rotate(180deg)",transition:"0.5s"}}>keyboard_arrow_down</span>
                     </div>
                 </div>
-                <div className="show_authors" style={{height:!drop ? "0px":"300px"}}>
-                   
+                <div className="show_authors" style={{height:!drop ? "0px":"300px",overflow:!drop ? "hidden":"auto",opacity:!drop ?"0":"1"}}>
                     {authors.map(item=> <Authors_card data={item} click={toggle_authors} key={item.id}/>)}
                 </div>
-                <Link className="author_btn">
+                <Link className="author_btn" style={{display:!drop ? "none":"flex"}}>
                     <span className="material-symbols-outlined">add</span>
                     <div>Add new author</div>
                 </Link>

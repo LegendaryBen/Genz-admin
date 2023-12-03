@@ -1114,7 +1114,7 @@
             .author_btn{
                 @include flex(center,center);height:52px;border: 1px dashed #0BA348;
                 border-radius:8px;color:$green1;@include archivo;font-size: 14px;font-weight: 500;
-                line-height: 15px;text-decoration:none;
+                line-height: 15px;text-decoration:none;display:none;
 
                 div{
                     margin-left:15px;
@@ -1124,7 +1124,7 @@
 
 
             .show_authors{
-                width:100%;height:0px;overflow: auto;@include padding(10px);
+                width:100%;height:0px;overflow:hidden;@include padding(10px);opacity:1;
                 transition:0.5s;
 
                     &::-webkit-scrollbar {
@@ -1200,4 +1200,58 @@
 
     }
     
+}
+
+
+.home_users{
+    width:96%;height:auto;border: 1px solid $grey6;margin-top:70px;margin-left:10px;
+    border-radius:15px;@include padding(20px);
+
+    .view_all{
+        @include flex(space-between,center);width:100%;margin-bottom:20px;@include archivo;
+        font-size: 20px;font-weight: 600;line-height: 22px;color:black;
+
+        a{
+            color:black;
+        }
+
+    }
+
+}
+
+
+.Users_card{
+    width:100%;@include flex(space-between,center);border-bottom: 0.5px solid $grey1;
+    height:102px;@include padding(10px);text-decoration:none;
+
+    .main_image{
+        @include flex(flex-start,center);@include archivo;font-size: 15px;font-weight: 400;line-height: 16px;
+        color:black;
+
+        img{
+            border-radius:50%;width:40px;height:40px;object-fit:cover;
+        }
+
+        div{
+            margin-left:10px;
+        }
+
+        span{
+            font-size:35px;
+        }
+    }
+}
+
+.blk{
+    text-decoration:none;@include padding(10px 20px);margin-left:20px;@include archivo;
+    font-size: 10px;font-weight: 500;line-height: 11px;
+
+}
+
+.blk-empty{
+    border: 1px solid #111111;color:black;border-radius:5px;
+}
+
+.blk-filled{
+    color:white;background-color:$red1;border-radius:5px;
 }

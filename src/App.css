@@ -1604,6 +1604,7 @@ body {
   font-weight: 500;
   line-height: 15px;
   text-decoration: none;
+  display: none;
 }
 .admin_home .home_first .add_authors .author_btn div {
   margin-left: 15px;
@@ -1611,8 +1612,9 @@ body {
 .admin_home .home_first .add_authors .show_authors {
   width: 100%;
   height: 0px;
-  overflow: auto;
+  overflow: hidden;
   padding: 10px;
+  opacity: 1;
   transition: 0.5s;
 }
 .admin_home .home_first .add_authors .show_authors::-webkit-scrollbar {
@@ -1682,4 +1684,84 @@ body {
 }
 .admin_home .home_first .add_authors .show_authors .authors_card .div5 .edit_author {
   background-color: #0BA348;
+}
+
+.home_users {
+  width: 96%;
+  height: auto;
+  border: 1px solid #707070;
+  margin-top: 70px;
+  margin-left: 10px;
+  border-radius: 15px;
+  padding: 20px;
+}
+.home_users .view_all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+  color: black;
+}
+.home_users .view_all a {
+  color: black;
+}
+
+.Users_card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid #CCCCCC;
+  height: 102px;
+  padding: 10px;
+  text-decoration: none;
+}
+.Users_card .main_image {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Archivo", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  color: black;
+}
+.Users_card .main_image img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.Users_card .main_image div {
+  margin-left: 10px;
+}
+.Users_card .main_image span {
+  font-size: 35px;
+}
+
+.blk {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-left: 20px;
+  font-family: "Archivo", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 11px;
+}
+
+.blk-empty {
+  border: 1px solid #111111;
+  color: black;
+  border-radius: 5px;
+}
+
+.blk-filled {
+  color: white;
+  background-color: #EA1111;
+  border-radius: 5px;
 }/*# sourceMappingURL=App.css.map */
