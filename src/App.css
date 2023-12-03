@@ -137,7 +137,7 @@ body {
   align-items: center;
 }
 .nav-container .sidebar {
-  flex-basis: 30%;
+  flex-basis: 25%;
   height: 100%;
   position: relative;
   display: block;
@@ -1495,4 +1495,121 @@ body {
   justify-content: center;
   align-items: center;
   padding: 5px;
+}
+
+.admin_home {
+  width: 95%;
+}
+.admin_home .home_first {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.admin_home .home_first .home_details {
+  width: 65%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  padding: 10px;
+}
+.admin_home .home_first .home_details .notify_block {
+  border: 1px solid #0BA348;
+  flex-basis: 31%;
+  height: 190px;
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 10px;
+  transition: 300ms;
+  padding: 30px 20px;
+  font-family: "Archivo", sans-serif;
+  text-decoration: none;
+}
+.admin_home .home_first .home_details .notify_block:hover {
+  box-shadow: 0px 0px 16px 15px rgba(0, 0, 0, 0.1019607843);
+}
+.admin_home .home_first .home_details .notify_block .block_first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.admin_home .home_first .home_details .notify_block .block_first div {
+  margin-left: 5px;
+  color: #505050;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15px;
+}
+.admin_home .home_first .home_details .notify_block .block_first span {
+  font-size: 30px;
+  color: #505050;
+}
+.admin_home .home_first .home_details .notify_block .block_second {
+  font-family: "Clash Display", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  color: black;
+  margin-bottom: 20px;
+}
+.admin_home .home_first .home_details .notify_block .block_third {
+  color: #828282;
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 15px;
+}
+.admin_home .home_first .add_authors {
+  width: 35%;
+  height: auto;
+  padding: 10px 40px;
+}
+.admin_home .home_first .add_authors .authors_toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  height: 52px;
+  background-color: #E2FDED;
+  color: #0BA348;
+  font-family: "Archivo", sans-serif;
+  border-radius: 8px;
+}
+.admin_home .home_first .add_authors .authors_toggle .toggle1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.admin_home .home_first .add_authors .authors_toggle .toggle1 div {
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.admin_home .home_first .add_authors .author_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+  border: 1px dashed #0BA348;
+  border-radius: 8px;
+  color: #0BA348;
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15px;
+}
+.admin_home .home_first .add_authors .author_btn div {
+  margin-left: 15px;
+}
+.admin_home .home_first .add_authors .show_authors {
+  width: 100%;
+  background-color: blue;
+  height: 300px;
+  overflow: auto;
 }/*# sourceMappingURL=App.css.map */

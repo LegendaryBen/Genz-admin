@@ -97,7 +97,7 @@
     width:100%;height:calc(100vh - 80px);@include flex(flex-start,center);
 
     .sidebar{
-        flex-basis:30%;height:100%;position:relative;display:block;
+        flex-basis:25%;height:100%;position:relative;display:block;
 
         @include maxScreen($tablet){
             display:none;
@@ -1041,4 +1041,95 @@
         background:$red1;color:white;border-radius:50%;min-width:30px;min-height:30px;
         @include flex(center,center);@include padding(5px);
     }
+}
+
+
+.admin_home{
+    width:95%;
+
+    .home_first{
+        width:100%;height:auto;@include flex(flex-start,flex-start);
+
+        .home_details{
+
+            width:65%;height:auto;@include flex(space-between,center);flex-wrap: wrap;
+            row-gap:25px;@include padding(10px);
+
+            .notify_block{
+                border: 1px solid $green1;flex-basis:31%;height:190px;box-shadow: 0px 0px 16px 4px #0000001A;
+                border-radius:10px;transition:300ms;@include padding(30px 20px);@include archivo; text-decoration:none;
+
+                &:hover{
+                    box-shadow: 0px 0px 16px 15px #0000001A;
+                }
+
+                .block_first{
+                    @include flex(flex-start,center);margin-bottom:20px;
+                   
+
+                    div{
+                        margin-left:5px;color:$grey5;font-size: 14px;font-weight: 500;line-height: 15px;
+                    }
+
+                    span{
+                        font-size:30px;color:$grey5;
+                    }
+                }
+
+                .block_second{
+                    @include clash;font-size: 24px;font-weight: 600;line-height: 30px;color:black;
+                    margin-bottom:20px;
+                }
+
+                .block_third{
+                    color:$grey4;@include archivo;font-size: 14px;font-weight: 300;line-height: 15px;
+                    
+                }
+
+            }
+
+
+        }
+
+        .add_authors{
+
+            width:35%;height:auto;@include padding(10px 40px);
+
+            .authors_toggle{
+                width:100%;@include flex(space-between,center);@include padding(10px 10px);
+                height:52px;background-color:$green2;color:$green1;@include archivo;
+                border-radius:8px;
+
+                .toggle1{
+                    @include flex(flex-start,center);
+
+                    div{
+                        margin-left:15px;font-size: 18px;font-weight: 500;line-height: 20px;
+                        
+                    }
+                }
+
+            }
+
+            .author_btn{
+                @include flex(center,center);height:52px;border: 1px dashed #0BA348;
+                border-radius:8px;color:$green1;@include archivo;font-size: 14px;font-weight: 500;
+                line-height: 15px;
+
+                div{
+                    margin-left:15px;
+                }
+                
+            }
+
+
+            .show_authors{
+
+                width:100%;background-color:blue;height:300px;overflow: auto;
+            }
+
+        }
+
+    }
+    
 }

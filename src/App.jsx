@@ -12,6 +12,7 @@ const Upload_story = lazy(()=> import('./Pages/Upload_Story'))
 const Upload_magazine_story = lazy(()=> import('./Pages/Upload_magazine_story'))
 const AdminDashboard = lazy(()=> import('./Pages/AdminDashboard'))
 import Nav from './context api/Nav'
+import Admin_Home from './Pages/Admin_Home'
 
 function App() {
   
@@ -64,7 +65,7 @@ function App() {
             <AdminDashboard/>
           </Suspense>}
          >
-          
+          <Route index element={<Admin_Home/>}/>
 
         </Route>
       </Routes>
