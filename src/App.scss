@@ -1148,13 +1148,20 @@
   
 
                 .authors_card{
-                    width:100%;height:50px;border-radius:5px;@include padding(5px);
+                    width:100%;height:50px;border-radius:8px;@include padding(5px);
                     box-shadow: 0px 4px 16px 0px #0021530D;background: #FFFFFF;
-                    margin-bottom:10px;@include flex(space-between,center);
+                    margin-bottom:10px;transition:0.5s;overflow:hidden;
 
-                    div{
+
+                    .div4{
+                        @include flex(space-between,center);width:100%;margin-bottom:15px;
+                    }
+
+
+                    .div3{
                         @include flex(flex-start,center);color:$grey3;@include archivo;
-                        font-size: 14px;font-weight: 500;line-height: 15px;
+                        font-size: 14px;font-weight: 500;line-height: 15px;margin-bottom:10px;
+                        
 
                         div{
                             margin-left:10px;
@@ -1163,6 +1170,25 @@
                         span{
                             font-size:30px;
                         }
+                    }
+
+                    .div5{
+
+                        @include flex(flex-start,center);
+
+                        .remove{
+                            text-decoration:none;color:white;@include archivo;font-size:13px;
+                            @include padding(3px 20px);margin-right:10px;border-radius:5px;
+                        }
+
+                        .delete_author{
+                            background-color:$red2;
+                        }
+
+                        .edit_author{
+                            background-color:$green1;
+                        }
+
                     }
 
 

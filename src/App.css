@@ -1631,16 +1631,22 @@ body {
 .admin_home .home_first .add_authors .show_authors .authors_card {
   width: 100%;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 5px;
   box-shadow: 0px 4px 16px 0px rgba(0, 33, 83, 0.0509803922);
   background: #FFFFFF;
   margin-bottom: 10px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.admin_home .home_first .add_authors .show_authors .authors_card .div4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
 }
-.admin_home .home_first .add_authors .show_authors .authors_card div {
+.admin_home .home_first .add_authors .show_authors .authors_card .div3 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1649,10 +1655,31 @@ body {
   font-size: 14px;
   font-weight: 500;
   line-height: 15px;
+  margin-bottom: 10px;
 }
-.admin_home .home_first .add_authors .show_authors .authors_card div div {
+.admin_home .home_first .add_authors .show_authors .authors_card .div3 div {
   margin-left: 10px;
 }
-.admin_home .home_first .add_authors .show_authors .authors_card div span {
+.admin_home .home_first .add_authors .show_authors .authors_card .div3 span {
   font-size: 30px;
+}
+.admin_home .home_first .add_authors .show_authors .authors_card .div5 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.admin_home .home_first .add_authors .show_authors .authors_card .div5 .remove {
+  text-decoration: none;
+  color: white;
+  font-family: "Archivo", sans-serif;
+  font-size: 13px;
+  padding: 3px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.admin_home .home_first .add_authors .show_authors .authors_card .div5 .delete_author {
+  background-color: #D30000;
+}
+.admin_home .home_first .add_authors .show_authors .authors_card .div5 .edit_author {
+  background-color: #0BA348;
 }/*# sourceMappingURL=App.css.map */
