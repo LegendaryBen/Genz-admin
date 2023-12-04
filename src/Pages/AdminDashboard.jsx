@@ -41,7 +41,7 @@ const AdminDashboard = (props) => {
             cls:"route",
             content:"Send Notification",
             image:'notifications',
-            to:'magazines'
+            to:'admin-notification'
         },
         {
             cls:"route",

@@ -16,7 +16,7 @@ import Admin_Home from './Pages/Admin_Home'
 const Admin_users = lazy(()=> import('./Pages/Admin_users'))
 const Admin_blocked_users = lazy(()=> import('./Pages/Admin_blocked_users'))
 const Admin_magazine = lazy(()=> import('./Pages/Admin_magazine'))
-
+const Admin_notification = lazy(()=> import('./Pages/Admin_notification'))
 
 
 
@@ -84,9 +84,14 @@ function App() {
               <Admin_blocked_users/>
             </Suspense>}
           />
-           <Route path='all-magazines' element={
+          <Route path='all-magazines' element={
             <Suspense fallback='loading..'>
               <Admin_magazine/>
+            </Suspense>}
+          />
+          <Route path='admin-notification' element={
+            <Suspense fallback='loading..'>
+              <Admin_notification/>
             </Suspense>}
           />
 

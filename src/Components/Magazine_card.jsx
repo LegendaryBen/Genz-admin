@@ -1,12 +1,13 @@
 import chima from "../Images/chima.jpg"
 import logo from "../Images/logo.svg"
+import { Link } from "react-router-dom"
 
 
 
 
 const Magazine_card = (props) => {
     return (
-        <div className="magazine_card">
+        <Link className="magazine_card">
             <img className="img" src={chima} alt="" />
             <div>
                 <div className="mgz-cat">Magazine</div>
@@ -21,7 +22,7 @@ const Magazine_card = (props) => {
                     September 2023
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
