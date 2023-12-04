@@ -1764,4 +1764,16 @@ body {
   color: white;
   background-color: #EA1111;
   border-radius: 5px;
+}
+
+.admin_users {
+  width: 96%;
+}
+.admin_users .all_users {
+  color: #505050;
+  font-family: "Clash Display", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=App.css.map */

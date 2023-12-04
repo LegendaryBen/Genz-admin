@@ -28,7 +28,7 @@ const AdminDashboard = (props) => {
             cls:"route",
             content:"Users",
             image:'person',
-            to:'magazines'
+            to:'admin-users'
         },
         {
             cls:"route",

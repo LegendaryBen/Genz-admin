@@ -1255,3 +1255,13 @@
 .blk-filled{
     color:white;background-color:$red1;border-radius:5px;
 }
+
+
+.admin_users{
+    width:96%;
+
+    .all_users{
+        color:$grey5;@include clash;font-size: 20px;font-weight: 600;line-height: 25px;margin-bottom:20px;
+        
+    }
+}
