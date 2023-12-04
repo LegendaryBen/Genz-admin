@@ -14,6 +14,12 @@ const AdminDashboard = lazy(()=> import('./Pages/AdminDashboard'))
 import Nav from './context api/Nav'
 import Admin_Home from './Pages/Admin_Home'
 const Admin_users = lazy(()=> import('./Pages/Admin_users'))
+const Admin_blocked_users = lazy(()=> import('./Pages/Admin_blocked_users'))
+
+
+
+
+
 
 function App() {
   
@@ -72,7 +78,11 @@ function App() {
               <Admin_users/>
             </Suspense>}
           />
-
+          <Route path='admin-blocked-user' element={
+            <Suspense fallback='loading..'>
+              <Admin_blocked_users/>
+            </Suspense>}
+          />
 
         </Route>
       </Routes>

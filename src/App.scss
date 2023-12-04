@@ -158,7 +158,7 @@
         }
 
         .settings{
-            width:100%;height:100px;position: absolute;bottom:0;left:0;
+            width:100%;height:50px;position: absolute;bottom:0;left:0;
             @include flex(center,center);flex-direction:column;
 
             a{
@@ -1248,6 +1248,12 @@
 
 }
 
+.edit_btn{
+    text-decoration:none;@include padding(10px 20px);margin-left:20px;@include archivo;
+    font-size: 10px;font-weight: 500;line-height: 11px;background-color:$grey6;color:white;
+    border-radius:5px;
+}
+
 .blk-empty{
     border: 1px solid #111111;color:black;border-radius:5px;
 }
@@ -1264,4 +1270,8 @@
         color:$grey5;@include clash;font-size: 20px;font-weight: 600;line-height: 25px;margin-bottom:20px;
         
     }
+}
+
+.admin_blocked_user{
+      width:96%;
 }

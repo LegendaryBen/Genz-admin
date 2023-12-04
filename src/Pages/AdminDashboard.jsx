@@ -32,6 +32,13 @@ const AdminDashboard = (props) => {
         },
         {
             cls:"route",
+            content:"Blocked Users",
+            image:'group_remove',
+            to:'admin-blocked-user'
+        },
+
+        {
+            cls:"route",
             content:"Send Notification",
             image:'notifications',
             to:'magazines'
