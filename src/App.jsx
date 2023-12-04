@@ -15,6 +15,7 @@ import Nav from './context api/Nav'
 import Admin_Home from './Pages/Admin_Home'
 const Admin_users = lazy(()=> import('./Pages/Admin_users'))
 const Admin_blocked_users = lazy(()=> import('./Pages/Admin_blocked_users'))
+const Admin_magazine = lazy(()=> import('./Pages/Admin_magazine'))
 
 
 
@@ -83,6 +84,12 @@ function App() {
               <Admin_blocked_users/>
             </Suspense>}
           />
+           <Route path='all-magazines' element={
+            <Suspense fallback='loading..'>
+              <Admin_magazine/>
+            </Suspense>}
+          />
+
 
         </Route>
       </Routes>

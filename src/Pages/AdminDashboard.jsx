@@ -22,7 +22,7 @@ const AdminDashboard = (props) => {
             cls:"route",
             content:"All Magazines",
             image:'menu_book',
-            to:'magazines'
+            to:'all-magazines'
         },
         {
             cls:"route",
