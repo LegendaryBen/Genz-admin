@@ -18,7 +18,7 @@ const Admin_blocked_users = lazy(()=> import('./Pages/Admin_blocked_users'))
 const Admin_magazine = lazy(()=> import('./Pages/Admin_magazine'))
 const Admin_notification = lazy(()=> import('./Pages/Admin_notification'))
 const Admin_authors = lazy(()=> import('./Pages/Admin_authors'))
-
+const Admin_subscription = lazy(()=> import('./Pages/Admin_subscription'))
 
 
 
@@ -99,7 +99,11 @@ function App() {
               <Admin_authors/>
             </Suspense>}
           />
-
+          <Route path='admin-subscription' element={
+            <Suspense fallback='loading..'>
+              <Admin_subscription/>
+            </Suspense>}
+          />
 
 
         </Route>

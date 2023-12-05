@@ -47,7 +47,7 @@ const AdminDashboard = (props) => {
             cls:"route",
             content:"Subscriptions",
             image:'bookmark',
-            to:'magazines'
+            to:'admin-subscription'
         },
         {
             cls:"route",
