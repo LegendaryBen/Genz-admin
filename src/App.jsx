@@ -17,7 +17,7 @@ const Admin_users = lazy(()=> import('./Pages/Admin_users'))
 const Admin_blocked_users = lazy(()=> import('./Pages/Admin_blocked_users'))
 const Admin_magazine = lazy(()=> import('./Pages/Admin_magazine'))
 const Admin_notification = lazy(()=> import('./Pages/Admin_notification'))
-
+const Admin_authors = lazy(()=> import('./Pages/Admin_authors'))
 
 
 
@@ -94,6 +94,12 @@ function App() {
               <Admin_notification/>
             </Suspense>}
           />
+          <Route path='admin-authors' element={
+            <Suspense fallback='loading..'>
+              <Admin_authors/>
+            </Suspense>}
+          />
+
 
 
         </Route>

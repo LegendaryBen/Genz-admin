@@ -1945,4 +1945,25 @@ body {
   font-weight: 600;
   line-height: 20px;
   color: white;
+}
+
+.admin-authors {
+  width: 96%;
+}
+.admin-authors .add {
+  margin-left: 5px;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+  width: 83px;
+  height: 61px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=App.css.map */

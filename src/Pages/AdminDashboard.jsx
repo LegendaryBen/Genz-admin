@@ -53,7 +53,7 @@ const AdminDashboard = (props) => {
             cls:"route",
             content:"Add Authors",
             image:'group_add',
-            to:'magazines'
+            to:'admin-authors'
         }
     ]
 

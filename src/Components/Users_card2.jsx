@@ -8,7 +8,7 @@ import Edit from "./Edit"
 
 const Users_card2 = (props) => {
     return (
-        <Link className="Users_card">
+        <div className="Users_card">
             <div className="main_image">
                 <img src={chima} alt="" />
                 {/* <span className="material-symbols-outlined">person</span> */}
@@ -21,7 +21,7 @@ const Users_card2 = (props) => {
                 <Edit/>
                 <Block_btn text="Block User" color="blk-filled"/>
             </div>
-        </Link>
+        </div>
     )
 }
 

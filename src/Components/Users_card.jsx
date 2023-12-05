@@ -6,7 +6,7 @@ import Block_btn from "./Block_btn"
 
 const Users_card = (props) => {
     return (
-        <Link className="Users_card">
+        <div className="Users_card">
             <div className="main_image">
                 <img src={chima} alt="" />
                 {/* <span className="material-symbols-outlined">person</span> */}
@@ -18,7 +18,7 @@ const Users_card = (props) => {
                 <Block_btn text="Send Notification" color="blk-empty"/>
                 <Block_btn text="Block User" color="blk-filled"/>
             </div>
-        </Link>
+        </div>
     )
 }
 
