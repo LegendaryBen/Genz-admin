@@ -12,6 +12,9 @@ const Display_Image = (props) => {
                 <img src={frame} alt="" />
             </div>
             <img src={chima} alt="" className='img2'/>
+            <div className="show-name">
+                This is the image name
+            </div>
         </div>
     )
 }

@@ -2041,4 +2041,19 @@ body {
   font-weight: 600;
   line-height: 20px;
   color: white;
+}
+
+.show-name {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Archivo", sans-serif;
+  padding: 20px;
+  font-size: 20px;
+  border: 1px dashed black;
+  background-color: white;
 }/*# sourceMappingURL=App.css.map */

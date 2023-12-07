@@ -19,7 +19,7 @@ const Admin_magazine = lazy(()=> import('./Pages/Admin_magazine'))
 const Admin_notification = lazy(()=> import('./Pages/Admin_notification'))
 const Admin_authors = lazy(()=> import('./Pages/Admin_authors'))
 const Admin_subscription = lazy(()=> import('./Pages/Admin_subscription'))
-
+const Admin_upload_magazine = lazy(()=> import('./Pages/Admin_upload_magazine'))
 
 
 function App() {
@@ -104,6 +104,12 @@ function App() {
               <Admin_subscription/>
             </Suspense>}
           />
+          <Route path='admin-upload' element={
+            <Suspense fallback='loading..'>
+              <Admin_upload_magazine/>
+            </Suspense>}
+          />
+
 
 
         </Route>

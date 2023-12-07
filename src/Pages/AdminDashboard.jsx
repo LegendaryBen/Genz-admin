@@ -16,7 +16,7 @@ const AdminDashboard = (props) => {
             cls:"route",
             content:"New Magazine",
             image:'edit_square',
-            to:'stories'
+            to:'admin-upload'
         },
         {
             cls:"route",
