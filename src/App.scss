@@ -1045,19 +1045,69 @@
 
 
 .admin_home{
-    width:95%;
+    width:95%;@include padding(0px);
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        width:100%;
+    }
+
+
+    @include maxScreen($tablet){
+        width:100%;
+    }
+
+    @include maxScreen($special-tablet){
+        width:98%;
+
+    }
+
+    @include maxScreen($special-tablet2){
+        @include padding(5px);width:100%;
+
+    }
 
     .home_first{
-        width:100%;height:auto;@include flex(flex-start,flex-start);
+        width:100%;height:auto;@include flex(flex-start,flex-start);flex-direction:row;
+
+        @include maxScreen($special-tablet){
+            flex-direction: column;
+        }
 
         .home_details{
 
             width:65%;height:auto;@include flex(space-between,center);flex-wrap: wrap;
-            row-gap:25px;@include padding(10px);
+            row-gap:25px;@include padding(10px);margin-bottom:0px;
+
+
+            @include minMaxScreen($laptop-min,$laptop-max){
+                @include padding(5px 5px);width:70%;
+            }
+
+
+            @include maxScreen($tablet){
+                @include padding(5px 5px);width:70%;
+                margin-bottom:10px;
+            }
+
+
+            @include maxScreen($special-tablet){
+                width:100%;
+            }
+
 
             .notify_block{
                 border: 1px solid $green1;flex-basis:31%;height:190px;box-shadow: 0px 0px 16px 4px #0000001A;
                 border-radius:10px;transition:300ms;@include padding(30px 20px);@include archivo; text-decoration:none;
+
+                @include minMaxScreen($laptop-min,$laptop-max){
+                    flex-basis:32%;
+                }
+
+                @include maxScreen($special-tablet2){
+                    flex-basis:100%;
+            
+                }
+            
 
                 &:hover{
                     box-shadow: 0px 0px 16px 15px #0000001A;
@@ -1069,20 +1119,36 @@
 
                     div{
                         margin-left:5px;color:$grey5;font-size: 14px;font-weight: 500;line-height: 15px;
+
+                        @include maxScreen($tablet){
+                            font-size:11px;
+                        }
                     }
 
                     span{
                         font-size:30px;color:$grey5;
+
+                        @include maxScreen($tablet){
+                            font-size:20px;
+                        }
                     }
                 }
 
                 .block_second{
                     @include clash;font-size: 24px;font-weight: 600;line-height: 30px;color:black;
                     margin-bottom:20px;
+
+                    @include maxScreen($tablet){
+                        font-size:18px;
+                    }
                 }
 
                 .block_third{
                     color:$grey4;@include archivo;font-size: 14px;font-weight: 300;line-height: 15px;
+
+                    @include maxScreen($tablet){
+                        font-size:11px;
+                    }
                     
                 }
 
@@ -1093,18 +1159,46 @@
 
         .add_authors{
 
-            width:35%;height:auto;@include padding(10px 40px);
+            width:35%;height:auto;@include padding(10px 40px);margin-top:0px;margin-left:0px;
+
+            @include minMaxScreen($laptop-min,$laptop-max){
+                @include padding(10px 10px);width:30%;
+            }
+
+            @include maxScreen($tablet){
+                @include padding(10px 20px);width:30%;
+            }
+
+            @include maxScreen($special-tablet){
+                width:50%;@include padding(0px);margin-top:20px;
+        
+            }
+
+            @include maxScreen($special-tablet2){
+                margin-left:10px;
+        
+            }
+
+            @include maxScreen($mobile4){
+                width:70%;
+            }
+        
 
             .authors_toggle{
                 width:100%;@include flex(space-between,center);@include padding(10px 10px);
                 height:52px;background-color:$green2;color:$green1;@include archivo;
                 border-radius:8px;
 
+
                 .toggle1{
                     @include flex(flex-start,center);
 
                     div{
                         margin-left:15px;font-size: 18px;font-weight: 500;line-height: 20px;
+
+                        @include maxScreen($tablet){
+                            font-size:13px;
+                        }
                         
                     }
                 }
@@ -1116,6 +1210,11 @@
                 border-radius:8px;color:$green1;@include archivo;font-size: 14px;font-weight: 500;
                 line-height: 15px;text-decoration:none;display:none;
 
+                
+                @include maxScreen($tablet){
+                    font-size:12px;
+                }
+
                 div{
                     margin-left:15px;
                 }
@@ -1126,6 +1225,11 @@
             .show_authors{
                 width:100%;height:0px;overflow:hidden;@include padding(10px);opacity:1;
                 transition:0.5s;
+
+                
+                @include maxScreen($tablet){
+                    @include padding(5px);
+                }
 
                     &::-webkit-scrollbar {
                         width:5px;border-radius:5px;
@@ -1161,6 +1265,11 @@
                     .div3{
                         @include flex(flex-start,center);color:$grey3;@include archivo;
                         font-size: 14px;font-weight: 500;line-height: 15px;margin-bottom:10px;
+
+                        
+                        @include maxScreen($tablet){
+                            font-size:11px;
+                        }
                         
 
                         div{
@@ -1169,6 +1278,11 @@
 
                         span{
                             font-size:30px;
+
+                            
+                            @include maxScreen($tablet){
+                                font-size:20px;
+                            }
                         }
                     }
 
@@ -1179,6 +1293,12 @@
                         .remove{
                             text-decoration:none;color:white;@include archivo;font-size:13px;
                             @include padding(3px 20px);margin-right:10px;border-radius:5px;
+
+                            
+                            @include maxScreen($tablet){
+                                font-size:8px;
+                            }
+
                         }
 
                         .delete_author{
@@ -1207,9 +1327,28 @@
     width:96%;height:auto;border: 1px solid $grey6;margin-top:70px;margin-left:10px;
     border-radius:15px;@include padding(20px);
 
+    @include maxScreen($tablet){
+        width:95%;
+    }
+
+    @include maxScreen($special-tablet2){
+        width:97%;
+
+    }
+
+    @include maxScreen($special-tablet2){
+        @include padding(7px);margin-left:5px;
+    }
+
+
     .view_all{
         @include flex(space-between,center);width:100%;margin-bottom:20px;@include archivo;
         font-size: 20px;font-weight: 600;line-height: 22px;color:black;
+
+        
+        @include maxScreen($tablet){
+            font-size:13px;
+        }
 
         a{
             color:black;
@@ -1224,12 +1363,34 @@
     width:100%;@include flex(space-between,center);border-bottom: 0.5px solid $grey1;
     height:102px;@include padding(10px);text-decoration:none;
 
+
+    @include maxScreen($special-tablet2){
+        @include padding(0px);
+
+    }
+
+
+
     .main_image{
         @include flex(flex-start,center);@include archivo;font-size: 15px;font-weight: 400;line-height: 16px;
         color:black;
 
+        @include maxScreen($tablet){
+            font-size:13px;
+        }
+
+        @include maxScreen($special-tablet2){
+            font-size:11px;
+    
+        }
+    
+
         img{
             border-radius:50%;width:40px;height:40px;object-fit:cover;
+
+            @include maxScreen($tablet){
+                height:30px;width:30px;
+            }
         }
 
         div{
@@ -1246,12 +1407,26 @@
     text-decoration:none;@include padding(10px 20px);margin-left:20px;@include archivo;
     font-size: 10px;font-weight: 500;line-height: 11px;
 
+    @include maxScreen($tablet){
+        @include padding(10px 10px);font-size:8px;
+    }
+
+    @include maxScreen($special-tablet2){
+        @include padding(5px);margin-left:5px;
+
+    }
+
+
 }
 
 .edit_btn{
     text-decoration:none;@include padding(10px 20px);margin-left:20px;@include archivo;
     font-size: 10px;font-weight: 500;line-height: 11px;background-color:$grey6;color:white;
     border-radius:5px;
+
+    @include maxScreen($special-tablet2){
+        font-size:7px;@include padding(5px 8px);margin-left:5px;
+    }
 }
 
 .blk-empty{
@@ -1264,21 +1439,62 @@
 
 
 .admin_users{
-    width:96%;
+    width:96%;@include padding(0px);
+
+    
+    @include minMaxScreen($laptop-min,$laptop-max){
+        width:98%
+    }
+
+    @include maxScreen($tablet){
+        width:98%;
+    }
+
+    @include maxScreen($special-tablet2){
+        @include padding(15px);width:100%;
+    }
 
     .all_users{
         color:$grey5;@include clash;font-size: 20px;font-weight: 600;line-height: 25px;margin-bottom:20px;
+
+        @include maxScreen($tablet){
+            font-size:15px;
+        }
         
     }
 }
 
 .admin_blocked_user{
-    width:96%;
+    width:96%;@include padding(0px);
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        width:98%
+    }
+
+    @include maxScreen($special-tablet2){
+        @include padding(15px);width:100%;
+    }
+
+    @include maxScreen($mobile4){
+        @include padding(8px);
+    }
 }
 
 
 .admin_magazine{
-    width:96%;
+    width:96%;@include padding(0px);
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        width:98%
+    }
+
+    @include maxScreen($special-tablet2){
+        @include padding(13px);
+    }
+
+    @include maxScreen($mobile4){
+        @include padding(5px);
+    }
 }
 
 
@@ -1286,22 +1502,48 @@
     width:100%;height:132px;border-bottom: 0.5px solid $grey1;@include flex(flex-start,flex-start);
     @include padding(10px);margin-bottom:20px;text-decoration:none;
 
+    @include maxScreen($special-tablet2){
+        height:138px;
+    }
+
     .img{
         width:114px;height:100%;object-fit:cover;margin-right:10px;
     }
 
     .mgz-cat{
         margin-bottom:10px;color:$red2;@include archivo;font-size: 16px;font-weight: 500;line-height: 17px;
+
+        @include maxScreen($tablet){
+            font-size:13px;
+        }
+
+        @include maxScreen($special-tablet2){
+            font-size:10px;
+        }
+
     }
 
     .mgz-topic{
         color:black;@include archivo;font-size: 16px;font-weight: 700;line-height: 17px;
         margin-bottom:10px;
+
+        @include maxScreen($tablet){
+            font-size:13px;
+        }
+
+        @include maxScreen($special-tablet2){
+            font-size:10px;
+        }
+
     }
 
     .mgz-logo{
         @include flex(flex-start,center);color:black;@include clash;font-size: 12px;font-weight: 600;
         line-height: 15px;margin-bottom:10px;
+
+        @include maxScreen($tablet){
+            font-size:10px;
+        }
         
 
         img{
@@ -1312,6 +1554,15 @@
                     
     .mgz-date{
         color:$grey6;@include archivo;font-size: 12px;font-weight: 400;line-height: 13px;
+
+        @include maxScreen($tablet){
+            font-size:10px;
+        }
+
+        @include maxScreen($special-tablet2){
+            font-size:8px;
+        }
+
         
     }
 
@@ -1320,10 +1571,23 @@
 
 
 .magazine-btn{
-    @include flex(space-between,center);margin-bottom:20px;
+    @include flex(space-between,center);margin-bottom:20px;margin-left:0px;
 
     .mgn-topic{
         color:$grey5;@include clash;font-size: 20px;font-weight: 600;line-height: 25px;
+
+        @include maxScreen($tablet){
+            font-size:15px;
+        }
+
+        @include maxScreen($special-tablet2){
+            margin-left:10px;
+        }
+
+        @include maxScreen($mobile4){
+            margin-left:5px;font-size:10px;
+        }
+
         
     }
 
@@ -1332,6 +1596,10 @@
         color:white;text-decoration:none;border-radius:8px;@include archivo;
         font-size: 14px;font-weight: 500;line-height: 21px;
         border:1px solid transparent;transition:300ms;
+
+        @include maxScreen($tablet){
+            font-size:11px;@include padding(5px 8px);
+        }
 
         &:hover{
             background-color:white;color:$green1;border:1px solid $green1;
@@ -1345,15 +1613,51 @@
 
 
 .admin_notication{
-    width:96%;
+    width:96%;@include padding(0px);
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        width:100%
+    }
+
+    @include maxScreen($tablet){
+        width:100%;
+    }
+
+
+    @include maxScreen($special-tablet2){
+        @include padding(5px);
+
+    }
+
+
+
 }
 
 
 .special_input{
     width:90.08%;margin-bottom:30px;margin-left:5px;
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        width:91%
+    }
+
+    @include maxScreen($tablet){
+        width:96%;
+    }
+
+    @include maxScreen($special-tablet2){
+        width:91%;margin-left:20px;
+
+    }
+
+
     input{
         width:100%;@include padding(15px 10px);outline:none;box-shadow: 0px 1px 6px 0px #00000026;
         border:none;transition:0.3s;margin-top:10px;border-radius:5px;
+
+        @include maxScreen($tablet){
+            @include padding(10px 10px);
+        }
 
         &:focus{
             
@@ -1365,6 +1669,10 @@
 
     label{
         @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
+
+        @include maxScreen($tablet){
+            font-size:14px;
+        }
     }
 
     span{
@@ -1378,22 +1686,62 @@
     background-image: linear-gradient(0deg, #707070, #707070),linear-gradient(0deg, #CCCCCC, #CCCCCC);
     @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;color:white;
 
+    @include maxScreen($tablet){
+        width:95%;height:40px;font-size:14px;
+    }
+
+    @include maxScreen($special-tablet2){
+        margin-left:20px;width:91%;
+
+    }
+
+
+
 }
 
 .admin-authors{
     width:96%;
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        width:100%
+    }
+
+    @include maxScreen($tablet){
+        width:100%;
+    }
 
     .add{
         margin-left:5px;border: 1px solid $grey1;box-shadow: 0px 2px 6px 0px #00000040;
         width:83px;height:61px;background-color:black;color:white;border-radius:5px;
         @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;@include flex(center,center);
 
+        @include maxScreen($tablet){
+            font-size:13px;height:41px;width:79px;
+        }
+
+        @include maxScreen($special-tablet2){
+            font-size:10px;margin-left:20px;height:31px;width:69px;
+        }
+
     }
 }
 
 
 .admin-subcription{
-    width:96%;
+    width:96%;@include padding(0px);
+
+    @include minMaxScreen($laptop-min,$laptop-max){
+        width:98%
+    }
+
+    @include maxScreen($tablet){
+        width:98%;
+    }
+
+    @include maxScreen($special-tablet2){
+        width:100%;@include padding(20px);
+    }
+
 }
 
 
@@ -1404,6 +1752,10 @@
     .main_image2{
         @include flex(flex-start,center);@include archivo;font-size: 15px;font-weight: 400;line-height: 16px;
         color:black;
+
+        @include maxScreen($special-tablet2){
+            font-size:10px;
+        }
 
         img{
             border-radius:50%;width:40px;height:40px;object-fit:cover;
@@ -1435,6 +1787,11 @@
     @include flex(center,center);width:90%;margin-left:5px;margin-top:20px;
     border-radius:5px;@include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
     color:white;
+
+    @include maxScreen($tablet){
+        font-size:13px;height:41px;width:97%;
+    }
+    
     
 }
 
@@ -1442,4 +1799,8 @@
     position:absolute;width:100%;height:100%;background-color:blue;@include flex(center,center);
     @include archivo;@include padding(20px);font-size:20px;border:1px dashed black;
     background-color:white;
+
+    @include maxScreen($tablet){
+        font-size:13px;
+    }
 }
