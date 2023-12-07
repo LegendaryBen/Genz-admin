@@ -1,6 +1,6 @@
 import Header from '../Components/Header'
 import Nav_container from '../Components/Nav-container'
-
+import Navbar2 from '../Components/Navbar2'
 
 
 const AdminDashboard = (props) => {
@@ -71,6 +71,7 @@ const AdminDashboard = (props) => {
         <>
             <Header/>
             <Nav_container details={navDetails} draft={draft}/>
+            <Navbar2/>
         </>
     )
 }
