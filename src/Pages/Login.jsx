@@ -7,6 +7,7 @@ import Nav_Link from '../Components/Nav_Link'
 import Option from '../Components/Option'
 import Inputs from '../Components/Inputs'
 import Submit from '../Components/Submit'
+import Loader from '../Components/Loader'
 
 
 
@@ -19,7 +20,7 @@ const Login = () => {
                     <div className='container1'>
                         <Error/>
                         <User_link  title="AUTHOR  DASHBOARD"/>
-                        <Nav_Link title="Login As Adminisgtrator"/>
+                        <Nav_Link title="Login As Administrator" to='/admin'/>
                         <Option/>
                         <Inputs label='Email' placeholder="Enter your email"/>
                         <Inputs label='Password' placeholder="Enter your password"/>
@@ -29,6 +30,7 @@ const Login = () => {
                 <div className="img-block">
                         <img src={fancy} alt="" />
                 </div>
+                {/* <Loader/> */}
         </div>
     )
 }

@@ -20,12 +20,14 @@ const Admin_notification = lazy(()=> import('./Pages/Admin_notification'))
 const Admin_authors = lazy(()=> import('./Pages/Admin_authors'))
 const Admin_subscription = lazy(()=> import('./Pages/Admin_subscription'))
 const Admin_upload_magazine = lazy(()=> import('./Pages/Admin_upload_magazine'))
+import Auth from './context api/Auth'
 
 
 function App() {
   
   return (
     <BrowserRouter>
+    <Auth>
     <Nav>
       <Routes>
         <Route path='/' element={<Login/>}/>
@@ -115,6 +117,7 @@ function App() {
         </Route>
       </Routes>
     </Nav>
+    </Auth>
     </BrowserRouter>
   )
  

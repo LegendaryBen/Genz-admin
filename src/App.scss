@@ -908,26 +908,69 @@
     .modal-btns{
         width:700px;height:350px;background-color:white;border-radius:10px;@include padding(20px);
 
+
+        @include maxScreen($tablet){
+        
+            height:400px;width:400px;
+
+        }
+
+
+        @include maxScreen($mobile4){
+        
+            width:90%;
+
+        }
+
+    
         .img-container{
             @include flex(center,center);
         }
 
         .modal-topic{
             text-align: center;@include padding(20px);color:black;@include archivo;font-size: 20px;
-            font-weight: 500;line-height: 22px;            
+            font-weight: 500;line-height: 22px;
+            
+            @include maxScreen($tablet){
+        
+                font-size:15px;line-height:15px;
+    
+            }
+
         }
 
         .modal-message{
             @include padding(10px 0px);text-align: center;color:$grey4;@include archivo;
             font-size: 16px;font-weight: 400;line-height: 17px;
+
+            @include maxScreen($tablet){
+        
+                font-size:13px;line-height:14px;
+    
+            }
+
+
         }
 
         .modal-btn-container{
-            @include flex(center,center);@include padding(20px 10px);
+            @include flex(center,center);@include padding(20px 10px);flex-direction:row;
+
+            @include maxScreen($tablet){
+        
+                flex-direction:column;
+    
+            }
 
             .modal-save{
                 width:40%;height:60px;margin-right:20px;border-radius:7px;@include flex(center,center);
                 @include archivo;font-size: 18px;font-weight: 600;line-height: 20px;
+                margin-bottom:0px;
+
+                @include maxScreen($tablet){
+        
+                    margin-bottom:20px;width:100%;margin-right:0px;font-size:15px;height:50px;
+        
+                }
 
             }
 
@@ -1612,6 +1655,22 @@
 }
 
 
+.loader{
+    width:100%;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0, 0, 0,0.5);
+    backdrop-filter:blur(5px);@include flex(center,center);z-index:500;
+
+    div{
+        width:40px;margin-right:20px;height:40px;background-color:white;border-radius:50%;
+        animation: load 1s ease-in-out infinite ;
+
+        @include maxScreen($tablet){
+            width:30px;height:30px;margin-right:10px;
+        }
+    }
+
+}
+
+
 .admin_notication{
     width:96%;@include padding(0px);
 
@@ -1778,7 +1837,14 @@
 
     .modal_content{
         width:70%;height: 620px;background-color:white;border-radius:10px;@include padding(30px);
+
+        
+        @include maxScreen($tablet){
+            width:90%;height:90%;@include padding(10px);
+        }
+
     }
+
 }
 
 
@@ -1802,5 +1868,20 @@
 
     @include maxScreen($tablet){
         font-size:13px;
+    }
+}
+
+
+@keyframes load {
+    0%{
+        transform:scale(0%);
+    }
+
+    50%{
+        transform:scale(100%);
+    }
+
+    100%{
+        transform:scale(0%);
     }
 }

@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 
 
-const Nav_Link = ({title}) => {
+const Nav_Link = ({title,to}) => {
     return (
         <div className='navlink'>
-            <Link>
+            <Link to={to}>
                 <img src={admin} alt="" />
                 <span>{title}</span>
             </Link>
