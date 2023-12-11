@@ -1,9 +1,22 @@
-import React from 'react'
+import {useContext} from 'react'
 import Header from '../Components/Header'
 import Nav_container from '../Components/Nav-container'
 import Navbar from '../Components/Navbar'
+import { User } from '../context api/Auth'
+import { Navigate } from 'react-router-dom'
+import useAuthor from '../custom hooks/useAuthor'
+
+
+
 
 const Authors = (props) => {
+
+
+    const{author,setAuthor,setAuthorDetail}= useContext(User);
+
+    useAuthor(setAuthor);
+
+
 
     const navDetails = [
         {
@@ -38,13 +51,13 @@ const Authors = (props) => {
 
 
 
-    return (
+    return author ? (
         <>
             <Header/>
             <Nav_container details={navDetails} draft={draft}/>
             <Navbar/>
         </>
-    )
+    ) : <Navigate to='/'/>
 }
 
 export default Authors

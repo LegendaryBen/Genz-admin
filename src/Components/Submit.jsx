@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Submit = (props) => {
+const Submit = ({change}) => {
     return (
         <div className='submit'>
-            <div>
+            <div onClick={change}>
                 Log In
             </div>
         </div>

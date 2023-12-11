@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Error = (props) => {
+const Error = ({text}) => {
     return (
         <div className='error'>
-            Incorrect blah blah blah!... abeg how person go forget en login details
+            {text}
         </div>
     )
 }
