@@ -8,7 +8,7 @@ const User = createContext()
 const Auth = ({children}) => {
 
     const[author,setAuthor] = useState(true);
-    const[admins,setAdmins] = useState(false);
+    const[admins,setAdmins] = useState(true);
     const[authorDetail,setAuthorDetail]=useState({});
     const[adminDetail,setAdminDetail]=useState({});
 

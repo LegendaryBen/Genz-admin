@@ -1,9 +1,19 @@
 import Header from '../Components/Header'
 import Nav_container from '../Components/Nav-container'
 import Navbar2 from '../Components/Navbar2'
+import { User } from '../context api/Auth'
+import { Navigate } from 'react-router-dom'
+import useAdmin from '../custom hooks/useAdmin'
+import { useContext } from 'react'
 
 
 const AdminDashboard = (props) => {
+
+
+    const{admins,setAdmins,setAdminDetail}= useContext(User);
+
+    useAdmin(setAdmins);
+
 
     const navDetails = [
         {
@@ -67,13 +77,13 @@ const AdminDashboard = (props) => {
     }
 
 
-    return (
+    return admins ? (
         <>
             <Header/>
             <Nav_container details={navDetails} draft={draft}/>
             <Navbar2/>
         </>
-    )
+    ): <Navigate to='/admin'/>
 }
 
 export default AdminDashboard
