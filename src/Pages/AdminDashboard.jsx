@@ -10,7 +10,9 @@ import { useContext } from 'react'
 const AdminDashboard = (props) => {
 
 
-    const{admins,setAdmins,setAdminDetail}= useContext(User);
+    const{setAdmins,setAdminDetail}= useContext(User);
+    let admins = localStorage.getItem("genz-admin")||'';
+
 
     useAdmin(setAdmins);
 
@@ -77,7 +79,7 @@ const AdminDashboard = (props) => {
     }
 
 
-    return admins ? (
+    return admins !== '' ? (
         <>
             <Header/>
             <Nav_container details={navDetails} draft={draft}/>

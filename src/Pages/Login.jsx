@@ -25,12 +25,15 @@ const Login = () => {
     const[message,setMessage]= useState('');
     const[error,setError] = useState(false);
 
-    const{author,setAuthor,setAuthorDetail}= useContext(User);
+    const{setAuthor,setAuthorDetail}= useContext(User);
+
+    let author = localStorage.getItem("genz-author") || '';
 
     useAuthor(setAuthor);
 
 
     const logAuthor = ()=>{
+
         if(email == ""||password == ""){
 
             setMessage("Input field should not be empty, check properly!");
@@ -44,9 +47,7 @@ const Login = () => {
 
                 if(detail.is_author == true){
 
-                    localStorage.setItem("genz-author",res.data.refresh);
-                    setAuthor(true);
-                    setAuthorDetail(detail);
+                    localStorage.setItem("genz-author",JSON.stringify(res.data));
                     setEmail('');
                     setPassword('');
                     setLoading(false);
@@ -81,7 +82,7 @@ const Login = () => {
 
 
 
-    return !author ? (
+    return author == '' ? (
         <div className='login'>
                 <div className="login-details">
                     <Login_Header/>

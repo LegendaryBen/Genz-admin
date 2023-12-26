@@ -12,11 +12,11 @@ import useAuthor from '../custom hooks/useAuthor'
 const Authors = (props) => {
 
 
-    const{author,setAuthor,setAuthorDetail}= useContext(User);
+    const{setAuthor,setAuthorDetail}= useContext(User);
 
     useAuthor(setAuthor);
 
-
+    let author = localStorage.getItem("genz-author")||''
 
     const navDetails = [
         {
@@ -51,7 +51,7 @@ const Authors = (props) => {
 
 
 
-    return author ? (
+    return author !=='' ? (
         <>
             <Header/>
             <Nav_container details={navDetails} draft={draft}/>

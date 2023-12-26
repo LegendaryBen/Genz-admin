@@ -9,23 +9,24 @@ const useAdmin = (change) => {
 
     useLayoutEffect(()=>{
 
-        let token = localStorage.getItem("genz-admin")||'';
+        let token = localStorage.getItem("genz-admin")?.refresh||'';
 
         if(token == ''){
 
-            change(false);
+            return
             
         }else{
 
             axios.post("https://gen-zsquare.com/api/token/refresh/",{refresh:token}).then((res)=>{
 
-                change(true);
+                localStorage.setItem("genz-admin",JSON.stringify(res));
+
 
             }).catch((err)=>{
                 
                 if(err.message !== "Network Error"){
-                    change(false);
                     localStorage.removeItem("genz-admin");
+                    window.location.reload();
                 }
 
             })

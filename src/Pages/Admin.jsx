@@ -27,7 +27,8 @@ const Admin = () => {
     const[message,setMessage]= useState('');
     const[error,setError] = useState(false);
 
-    const{admins,setAdmins,setAdminDetail}= useContext(User);
+    const{setAdmins,setAdminDetail}= useContext(User);
+    let admins = localStorage.getItem("genz-admin")||'';
 
     useAdmin(setAdmins);
 
@@ -46,9 +47,7 @@ const Admin = () => {
 
                 if(detail.is_admin == true){
 
-                    localStorage.setItem("genz-admin",res.data.refresh);
-                    setAdmins(true);
-                    setAdminDetail(detail);
+                    localStorage.setItem("genz-admin",JSON.stringify(res.data));
                     setEmail('');
                     setPassword('');
                     setLoading(false);
@@ -83,7 +82,7 @@ const Admin = () => {
 
 
 
-    return !admins ? (
+    return admins == '' ? (
         <div className='login'>
                 <div className="login-details">
                     <Login_Header/>
