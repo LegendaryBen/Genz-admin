@@ -19,7 +19,7 @@ const useAuthor = (change) => {
 
             axios.post("https://gen-zsquare.com/api/token/refresh/",{refresh:token}).then((res)=>{
 
-                localStorage.setItem("genz-author",JSON.stringify(res));
+                localStorage.setItem("genz-author",JSON.stringify(res.data));
 
             }).catch((err)=>{
                 

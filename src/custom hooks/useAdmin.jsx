@@ -19,7 +19,7 @@ const useAdmin = (change) => {
 
             axios.post("https://gen-zsquare.com/api/token/refresh/",{refresh:token}).then((res)=>{
 
-                localStorage.setItem("genz-admin",JSON.stringify(res));
+                localStorage.setItem("genz-admin",JSON.stringify(res.data));
 
 
             }).catch((err)=>{
