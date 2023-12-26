@@ -4,6 +4,21 @@ import Buttons2 from './Buttons2'
 import Buttons3 from './Buttons3'
 
 const Sidebar = ({navDEtails,draft}) => {
+
+    const logout = ()=>{
+
+        if(draft.status == true){
+            localStorage.removeItem("genz-author");
+            window.location.reload();
+        }else{
+            localStorage.removeItem("genz-admin");
+            window.location.reload();
+        }
+
+    }
+
+
+
     return (
         <div className='sidebar'>
             <div className="nav-buttons">
@@ -17,7 +32,7 @@ const Sidebar = ({navDEtails,draft}) => {
 
             </div>
             <div className="settings">
-                <Buttons3 to='' image='logout' content='Log Out'/>
+                <Buttons3 to='' image='logout' content='Log Out' click={logout}/>
             </div>
         </div>
     )

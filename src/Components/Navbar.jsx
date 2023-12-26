@@ -10,6 +10,15 @@ const Navbar = (props) => {
     const {slide, setSlide} = useContext(NavContext);
 
 
+    
+    const logout = ()=>{
+
+        localStorage.removeItem("genz-author");
+        window.location.reload();
+
+    }
+
+
     return (
         <div className='Navbar'  style={{left:!slide ? "-100%" : "0%",transition: "all 0.5s"}}>
 
@@ -60,7 +69,7 @@ const Navbar = (props) => {
                 </div>
             </Link>
 
-            <Link className='nav-btn1' onClick={()=>{setSlide(false)}}>
+            <Link className='nav-btn1'  onClick={logout}>
                 <span className="material-symbols-outlined">logout</span>
                 <div>Log out</div>
             </Link>
