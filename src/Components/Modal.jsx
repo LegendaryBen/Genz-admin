@@ -4,7 +4,7 @@ import Modal_btn from './Modal_btn'
 
 
 
-const Modal = () => {
+const Modal = ({cancle}) => {
     return (
         <div className='modal'>
             <div className="modal-btns">
@@ -20,7 +20,7 @@ const Modal = () => {
                 </div>
                 <div className="modal-btn-container">
                     <Modal_btn label="Publish" cls='publish'/>
-                    <Modal_btn label="Cancle" cls='cancle'/>
+                    <Modal_btn label="Cancle" cls='cancle' cancle={cancle}/>
                 </div>
             </div>
         </div>

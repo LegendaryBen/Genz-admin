@@ -3,7 +3,7 @@ import Category from './Category'
 
 
 
-const Categories = () => {
+const Categories = ({change,val}) => {
 
     const categories = [
         {
@@ -57,7 +57,7 @@ const Categories = () => {
             <div className="cats">
                 {
                     categories.map((item)=>{
-                        return <Category name={item.name} key={item.id}/>
+                        return <Category name={item.name} key={item.id} change={change} val={val}/>
                     })
                 }
             </div>

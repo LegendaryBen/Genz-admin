@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Upload_warn = () => {
+const Upload_warn = ({msg,colors}) => {
     return (
-        <div className='upload-warn'>
-            A field is incomplete, please fill all fields with their appropriate information or save to drafts
+        <div className='upload-warn' style={{borderColor:colors,color:colors}}>
+            {msg}
         </div>
     )
 }

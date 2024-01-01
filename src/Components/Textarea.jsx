@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Textarea = (props) => {
+const Textarea = ({val,change}) => {
     return (
-        <textarea className='textarea'></textarea>
+        <textarea className='textarea' value={val} onChange={(e)=>change(e.target.value)}></textarea>
     )
 }
 

@@ -4,16 +4,16 @@ import chima from '../Images/chima.jpg'
 
 
 
-const Display_Image = (props) => {
+const Display_Image = ({reff,preview,image,show,select}) => {
     return (
         <div className='display-image'>
-            <input type="file" name="" id="" />
+            <input type="file" name="" id="" style={{display:"none"}} ref={reff} onChange={select}/>
             <div className="img">
                 <img src={frame} alt="" />
             </div>
-            <img src={chima} alt="" className='img2'/>
+            { preview && <img src={show} alt="" className='img2'/>}
             <div className="show-name">
-                This is the image name
+                Select an image file
             </div>
         </div>
     )

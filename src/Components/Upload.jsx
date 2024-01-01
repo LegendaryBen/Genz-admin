@@ -1,16 +1,16 @@
 import React from 'react'
 import frame from '../Images/frame.svg'
 
-const Upload = () => {
+const Upload = ({reff}) => {
     return (
         <div className='upload'>
             <div className="story-cover-image">
                 Story Cover Image
             </div>
             <div className="image-support">
-                We support PNGs and JPEGs  under 2MB
+                We support JPGs and JPEGs  under 2MB
             </div>
-            <img src={frame} alt=""  className='clicked'/>
+            <img src={frame} alt=""  className='clicked' onClick={()=>reff.current.click()}/>
         </div>
     )
 }

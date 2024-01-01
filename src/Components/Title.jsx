@@ -4,11 +4,11 @@ import Label from './Label'
 
 
 
-const Title = ({title}) => {
+const Title = ({title,val,change}) => {
     return (
         <div className='upload-title'>
             <Label label={title}/><br/>
-            <Title_input/>
+            <Title_input val={val} change={change}/>
         </div>
     )
 }

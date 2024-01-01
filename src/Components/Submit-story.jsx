@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Submit_story = ({cls,text}) => {
+const Submit_story = ({cls,text,change1}) => {
     return (
-        <div className={`submit-story ${cls}`}>
+        <div className={`submit-story ${cls}`} onClick={change1}>
             {text}
         </div>
     )

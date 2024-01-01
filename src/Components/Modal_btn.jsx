@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Modal_btn = ({label,cls}) => {
+const Modal_btn = ({label,cls,cancle}) => {
     return (
-        <div className={`modal-save ${cls}`}>
+        <div className={`modal-save ${cls}`} onClick={()=>cancle(false)}>
             {label}
         </div>
     )

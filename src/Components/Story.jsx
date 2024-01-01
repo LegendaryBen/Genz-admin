@@ -3,11 +3,11 @@ import Label from './Label'
 import Textarea from './Textarea'
 
 
-const Story = (props) => {
+const Story = ({val,change}) => {
     return (
         <div className='upload-title'>
             <Label label='Story'/><br/>
-            <Textarea/>
+            <Textarea val={val} change={change}/>
         </div>
     )
 }

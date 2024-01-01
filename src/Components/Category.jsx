@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Category = ({name}) => {
+const Category = ({name,change,val}) => {
     return (
-        <div className='category'>
+        <div className='category' onClick={()=>change(name)} style={{backgroundColor:val == name?"black":"white", color:val == name?"white":"black"}}>
             {
                 name
             }
