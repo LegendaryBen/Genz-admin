@@ -130,7 +130,7 @@ const Upload_Story = (props) => {
                 formData.append('imageSource',source);
                 formData.append('storyBy',storyby);
 
-
+                setSubmit(false);
                     
                 setLoad(true);
 
@@ -202,8 +202,8 @@ const Upload_Story = (props) => {
             <Upload_Section preview={preview} image={image} select={selectImage} show={show}/>
             <Title title="Image Source" val={source} change={setSource}/>
             <Title title="Story By" val={storyby} change={setStoryby}/>
-            <Submit_Section change1={uploadStory} />
-            { submit && <Modal cancle={setSubmit}/>} 
+            <Submit_Section change1={setSubmit} />
+            { submit && <Modal cancle={setSubmit} up={uploadStory}/>} 
             {load && <Loader/>}
         </>
     )

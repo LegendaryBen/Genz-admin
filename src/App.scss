@@ -1878,6 +1878,7 @@
     width:100%;background-color:red;position: absolute;top:-200%;left:0;
     @include archivo;color:white;height:80px;@include flex(center,center);
     font-size:20px;font-weight:bold;@include padding(20px);transition:0.5s;
+    z-index:200;
     
 
     @include maxScreen($tablet){

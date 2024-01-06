@@ -4,7 +4,7 @@ import Modal_btn from './Modal_btn'
 
 
 
-const Modal = ({cancle}) => {
+const Modal = ({cancle,up}) => {
     return (
         <div className='modal'>
             <div className="modal-btns">
@@ -19,7 +19,7 @@ const Modal = ({cancle}) => {
                     and uploaded. This story can be edited or deleted later
                 </div>
                 <div className="modal-btn-container">
-                    <Modal_btn label="Publish" cls='publish'/>
+                    <Modal_btn label="Publish" cls='publish' cancle={up}/>
                     <Modal_btn label="Cancle" cls='cancle' cancle={cancle}/>
                 </div>
             </div>

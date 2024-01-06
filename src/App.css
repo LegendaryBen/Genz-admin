@@ -2583,6 +2583,7 @@ body {
   font-weight: bold;
   padding: 20px;
   transition: 0.5s;
+  z-index: 200;
 }
 @media only screen and (max-width: 1023px) {
   .error {
