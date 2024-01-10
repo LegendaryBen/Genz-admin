@@ -4,7 +4,7 @@ import Story_cards from '../Components/Story-cards'
 const Home = (props) => {
     return (
         <>
-            <div className='snippets'>
+            {/* <div className='snippets'>
                 <div className="snippet-header">
                     New Stories
                 </div>
@@ -18,7 +18,7 @@ const Home = (props) => {
                 <Story_cards/>
                 <Story_cards/>
                 <Story_cards/>
-            </div>
+            </div> */}
         </>
     )
 }

@@ -379,6 +379,7 @@ body {
   line-height: 17px;
   color: #D30000;
   margin-bottom: 10px;
+  word-break: break-all;
 }
 .story-cards .card-topic {
   font-family: "Archivo", sans-serif;
@@ -387,6 +388,7 @@ body {
   line-height: 13px;
   margin-bottom: 10px;
   color: #505050;
+  word-break: break-all;
 }
 .story-cards .card-author {
   font-family: "Archivo", sans-serif;
@@ -395,6 +397,7 @@ body {
   line-height: 11px;
   margin-bottom: 10px;
   color: #505050;
+  word-break: break-all;
 }
 .story-cards .card-date {
   font-family: "Archivo", sans-serif;
@@ -402,6 +405,7 @@ body {
   font-weight: 400;
   line-height: 11px;
   color: #707070;
+  word-break: break-all;
 }
 
 .uploads {
@@ -1281,6 +1285,11 @@ body {
 .submit-section .black {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
   background-color: black;
+  color: white;
+}
+.submit-section .red {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
+  background-color: red;
   color: white;
 }
 .submit-section .green {
@@ -2603,6 +2612,145 @@ body {
   }
 }
 
+.fetch-loader {
+  width: 100%;
+  height: 500px;
+  background-color: #BDBDBD;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.fetch-loader div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  background-image: linear-gradient(to left, transparent, white, transparent);
+  animation: slide 1s ease-in-out infinite;
+}
+
+.fetch-error {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  background-color: #BDBDBD;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: "Archivo", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  padding: 30px;
+  line-height: 20px;
+}
+@media only screen and (max-width: 1023px) {
+  .fetch-error {
+    font-size: 30px;
+    line-height: 15px;
+  }
+}
+@media only screen and (max-width: 571px) {
+  .fetch-error {
+    font-size: 20px;
+    line-height: 10px;
+    height: 400px;
+  }
+}
+.fetch-error img {
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 1023px) {
+  .fetch-error img {
+    width: 200px;
+    height: 200px;
+    margin-right: 18px;
+  }
+}
+@media only screen and (max-width: 571px) {
+  .fetch-error img {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+  }
+}
+
+.fetch-empty {
+  width: 100%;
+  height: 500px;
+  background-color: #BDBDBD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: "Archivo", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 1023px) {
+  .fetch-empty {
+    font-size: 20px;
+    font-weight: bold;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 571px) {
+  .fetch-empty {
+    font-size: 15px;
+    font-weight: bold;
+    height: 200px;
+  }
+}
+
+.error-notice {
+  width: 100%;
+  height: 80px;
+  background-color: #0BA348;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 250;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Archivo", sans-serif;
+  color: white;
+  transition: 0.5s;
+}
+@media only screen and (max-width: 1023px) {
+  .error-notice {
+    font-size: 15px;
+    height: 60px;
+  }
+}
+.error-notice div {
+  margin-right: 20px;
+}
+.error-notice span {
+  font-size: 40px;
+}
+@media only screen and (max-width: 1023px) {
+  .error-notice span {
+    font-size: 30px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
 @keyframes load {
   0% {
     transform: scale(0%);

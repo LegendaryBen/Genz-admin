@@ -15,13 +15,13 @@ const Magazine = (props) => {
                 <div className="snippet-header">
                     Magazine Stories
                 </div>
+                {/* <Story_cards/>
                 <Story_cards/>
                 <Story_cards/>
                 <Story_cards/>
                 <Story_cards/>
                 <Story_cards/>
-                <Story_cards/>
-                <Story_cards/>
+                <Story_cards/> */}
             </div>
         </>
     )

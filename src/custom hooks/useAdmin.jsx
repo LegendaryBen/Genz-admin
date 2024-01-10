@@ -9,7 +9,7 @@ const useAdmin = (change) => {
 
     useLayoutEffect(()=>{
 
-        let token = localStorage.getItem("genz-admin")?.refresh||'';
+        let token = JSON.parse(localStorage.getItem("genz-admin"))?.refresh||'';
 
         if(token == ''){
 

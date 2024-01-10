@@ -2,25 +2,26 @@ import React from 'react'
 import chima from '../Images/chima.jpg'
 import { Link } from 'react-router-dom'
 
-const Story_cards = () => {
+const Story_cards = ({items}) => {
+
     return (
-        <Link className='story-cards'>
-            <img src={chima} alt="" />
-            <div>
-                <div className="card-header">
-                    Tech
+            <Link className='story-cards' to={`/authors/edit-story/${items.id}`}>
+                <img src={items?.image} alt="" />
+                <div>
+                    <div className="card-header">
+                        {items?.category}
+                    </div>
+                    <div className="card-topic">
+                        {items?.title.length > 74 ? items?.title.length.slice(0,70)+"...":items?.title}
+                    </div>
+                    <div className="card-author">
+                        By {items?.storyBy}
+                    </div>
+                    <div className="card-date">
+                        {items?.date_added}
+                    </div>
                 </div>
-                <div className="card-topic">
-                    The Best Headphones And Earbuds To Treat Your Ears To An Immersive Concert
-                </div>
-                <div className="card-author">
-                    By Benjamin chukwuezi
-                </div>
-                <div className="card-date">
-                    July 4, 2023
-                </div>
-            </div>
-        </Link>
+            </Link>
     )
 }
 

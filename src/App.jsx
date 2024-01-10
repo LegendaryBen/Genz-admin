@@ -9,6 +9,7 @@ const Stories = lazy(()=> import('./Pages/Stories'))
 const Magazine = lazy(()=> import('./Pages/Magazine'))
 const Draft = lazy(()=> import('./Pages/Drafts'))
 const Upload_story = lazy(()=> import('./Pages/Upload_Story'))
+const Edit_story = lazy(()=> import('./Pages/Edit_story'))
 const Upload_magazine_story = lazy(()=> import('./Pages/Upload_magazine_story'))
 const AdminDashboard = lazy(()=> import('./Pages/AdminDashboard'))
 import Nav from './context api/Nav'
@@ -21,12 +22,15 @@ const Admin_authors = lazy(()=> import('./Pages/Admin_authors'))
 const Admin_subscription = lazy(()=> import('./Pages/Admin_subscription'))
 const Admin_upload_magazine = lazy(()=> import('./Pages/Admin_upload_magazine'))
 import Auth from './context api/Auth'
+import { Provider } from 'react-redux'
+import store from './Redux/app/store'
 
 
 function App() {
   
   return (
     <BrowserRouter>
+    <Provider store={store}>
     <Auth>
     <Nav>
       <Routes>
@@ -61,6 +65,11 @@ function App() {
             <Route path='upload-story' element={
             <Suspense fallback='loading..'>
               <Upload_story/>
+            </Suspense>}
+            />
+            <Route path='edit-story/:ids' element={
+            <Suspense fallback='loading..'>
+              <Edit_story/>
             </Suspense>}
             />
             <Route path='upload-magazine-story' element={
@@ -118,6 +127,7 @@ function App() {
       </Routes>
     </Nav>
     </Auth>
+    </Provider>
     </BrowserRouter>
   )
  
