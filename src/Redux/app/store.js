@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import storySlice from "../features/stories/storySlice";
+import magazineSlice from "../features/magazine/magazineSlice";
 
 
 const store = configureStore({
     reducer:{
-        story:storySlice
+        story:storySlice,
+        magazine:magazineSlice
     }
 })
 

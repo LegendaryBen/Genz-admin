@@ -10,6 +10,7 @@ const Magazine = lazy(()=> import('./Pages/Magazine'))
 const Draft = lazy(()=> import('./Pages/Drafts'))
 const Upload_story = lazy(()=> import('./Pages/Upload_Story'))
 const Edit_story = lazy(()=> import('./Pages/Edit_story'))
+const Edit_magazine_story = lazy(()=> import('./Pages/Edit_magazine_story'))
 const Upload_magazine_story = lazy(()=> import('./Pages/Upload_magazine_story'))
 const AdminDashboard = lazy(()=> import('./Pages/AdminDashboard'))
 import Nav from './context api/Nav'
@@ -75,6 +76,11 @@ function App() {
             <Route path='upload-magazine-story' element={
             <Suspense fallback='loading..'>
               <Upload_magazine_story/>
+            </Suspense>}
+            />
+            <Route path='edit-magazine-story/:ids' element={
+            <Suspense fallback='loading..'>
+              <Edit_magazine_story/>
             </Suspense>}
             />
          </Route>
