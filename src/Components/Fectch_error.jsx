@@ -1,5 +1,5 @@
 import React from 'react'
-import error from '../images/load-error.svg'
+import error from '../Images/load-error.svg'
 
 const Fectch_error = (props) => {
     return (
