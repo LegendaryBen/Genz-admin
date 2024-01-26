@@ -1,49 +1,47 @@
 import Notify_Block from "./Notify_Block"
 import { Link } from "react-router-dom"
 import Authors_card from "./Authors_card"
-import { useState } from "react"
+import { useState,useEffect } from "react"
+import { useSelector } from "react-redux"
+
 
 
 
 
 const Home_first = () => {
 
-    const[drop,setDrop] = useState(false)
+    const[drop,setDrop] = useState(false);
+    const data = useSelector(state=>state.authors.data);
+    const[authors,setAuthors] = useState([]);
+
+
+
+    useEffect(()=>{
+
+        let modify = data.filter((item)=>{
+
+            if(item.is_author == true){
+                
+                let main = {...item}
+    
+                return main;
+            }
+    
+        }).map((item)=>{
+
+            return {...item,dropped:false}
+
+        })
+
+        setAuthors(modify)
+
+    },[data.length])
 
 
     const dropDown = ()=>{
         setDrop(!drop);
     }
-
-
-    const[authors,setAuthors] = useState([
-        {
-            id:1,
-            name:"chukwuezi Benjamin",
-            dropped:false
-        },
-        {
-            id:2,
-            name:"chukwuezi Benjamin",
-            dropped:false
-        },
-        {
-            id:3,
-            name:"chukwuezi Benjamin",
-            dropped:false
-        },
-        {
-            id:4,
-            name:"chukwuezi Benjamin",
-            dropped:false
-        },
-        {
-            id:5,
-            name:"chukwuezi Benjamin",
-            dropped:false
-        }
-    ])
-
+    
 
     const toggle_authors = (id)=>{
         
@@ -83,7 +81,7 @@ const Home_first = () => {
                 <div className="show_authors" style={{height:!drop ? "0px":"300px",overflow:!drop ? "hidden":"auto",opacity:!drop ?"0":"1"}}>
                     {authors.map(item=> <Authors_card data={item} click={toggle_authors} key={item.id}/>)}
                 </div>
-                <Link className="author_btn" style={{display:!drop ? "none":"flex"}}>
+                <Link className="author_btn" style={{display:!drop ? "none":"flex"}} to="/admin-dashboard/admin-authors">
                     <span className="material-symbols-outlined">add</span>
                     <div>Add new author</div>
                 </Link>

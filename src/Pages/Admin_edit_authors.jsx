@@ -1,13 +1,22 @@
-import { useState } from "react"
+import {useState,useEffect} from 'react'
+import { useParams,Navigate } from 'react-router-dom'
 import Sepcial_input from "../Components/Sepcial_input"
 import Error from "../Components/Error"
 import Loader from "../Components/Loader"
 import axios from "axios"
+import { useDispatch } from 'react-redux'
+import { fetchAuthors } from '../Redux/features/authors/authorsSlice'
 
 
 
-const Admin_authors = (props) => {
 
+
+
+const Admin_edit_authors = (props) => {
+
+    const{id} = useParams();
+    const dispatch = useDispatch();
+    
     const[load,setLoad] = useState(false);
     const[color,setColor] = useState("red");
     const[pos,setPos] = useState(false);
@@ -18,6 +27,38 @@ const Admin_authors = (props) => {
     const[name,setName] = useState('');
     const[email,setEmail] = useState('');
     const[password,setPassword] = useState('');
+
+
+
+    useEffect(()=>{
+
+        axios.get(`https://gen-zsquare.com/api/author/${id}`).then((res)=>{
+
+            setName(res.data.name);
+            setEmail(res.data.email);
+
+        }).catch((err)=>{
+
+                    setMessage("An error occurred while fetching user details!");
+                    setColor("red");
+                    setPos(true);
+
+
+                    setTimeout(()=>{
+
+                        setMessage("");
+                        setColor("red");
+                        setPos(false);
+
+                    },4000)
+                    
+
+        })
+
+
+    },[])
+
+
 
 
     const addAuthors = ()=>{
@@ -47,7 +88,7 @@ const Admin_authors = (props) => {
                 
                 setLoad(true);
 
-                axios.post('https://gen-zsquare.com/api/author',{
+                axios.patch(`https://gen-zsquare.com/api/author/${id}`,{
                     name,
                     email,
                     password
@@ -60,9 +101,10 @@ const Admin_authors = (props) => {
 
                     setLoad(false)
 
-                    setMessage("New author was created successfully. Check email to activate account!.");
+                    setMessage("Author details was updated successfully!.");
                     setColor("#0BA348");
                     setPos(true);
+                    dispatch(fetchAuthors())
 
                     setTimeout(()=>{
 
@@ -75,9 +117,11 @@ const Admin_authors = (props) => {
 
                 }).catch((err)=>{
 
+
+
                     setLoad(false)
 
-                    setMessage("An error occurred while creating a new author!");
+                    setMessage("An error occurred while updating details!");
                     setColor("red");
                     setPos(true);
 
@@ -103,21 +147,23 @@ const Admin_authors = (props) => {
     }
 
 
-
-
-    return (
+    return /[0-9]+/.test(id) == true ? (
         <>
             <div className="admin-authors">
                 <Sepcial_input label="Name" val={name} change={setName}/>
                 <Sepcial_input label="Email" val={email} change={setEmail}/>
                 <Sepcial_input label="Password" val={password} change={setPassword}/>
-                <div className="add" onClick={addAuthors}>Add</div>
+                <div className="add" onClick={addAuthors}>Edit</div>
             </div>
             <Error text={message} colors={color} pos={pos} change={setPos}/>
             {load && <Loader/>}
-        </>
+        </> 
        
-    )
+    ): <Navigate to='/admin-dashboard'/>
+
+
+
+
 }
 
-export default Admin_authors
+export default Admin_edit_authors

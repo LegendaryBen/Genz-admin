@@ -20,6 +20,7 @@ const Admin_blocked_users = lazy(()=> import('./Pages/Admin_blocked_users'))
 const Admin_magazine = lazy(()=> import('./Pages/Admin_magazine'))
 const Admin_notification = lazy(()=> import('./Pages/Admin_notification'))
 const Admin_authors = lazy(()=> import('./Pages/Admin_authors'))
+const Admin_edit_authors = lazy(()=> import('./Pages/Admin_edit_authors'))
 const Admin_subscription = lazy(()=> import('./Pages/Admin_subscription'))
 const Admin_upload_magazine = lazy(()=> import('./Pages/Admin_upload_magazine'))
 import Auth from './context api/Auth'
@@ -114,6 +115,11 @@ function App() {
           <Route path='admin-authors' element={
             <Suspense fallback='loading..'>
               <Admin_authors/>
+            </Suspense>}
+          />
+          <Route path='admin-edit/:id' element={
+            <Suspense fallback='loading..'>
+              <Admin_edit_authors/>
             </Suspense>}
           />
           <Route path='admin-subscription' element={

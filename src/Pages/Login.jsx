@@ -45,6 +45,7 @@ const Login = () => {
 
                 let detail = jwtDecode(res.data.refresh)
 
+
                 if(detail.is_author == true){
 
                     localStorage.setItem("genz-author",JSON.stringify(res.data));
@@ -62,6 +63,7 @@ const Login = () => {
 
 
             }).catch((err)=>{
+
 
                 if(err.message == "Network Error"){
                     setMessage(err.message);
